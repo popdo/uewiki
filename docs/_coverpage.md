@@ -8,7 +8,7 @@
 - 无需生成 html 文件
 - 众多主题
 
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://github.com/popdo/uewiki/)
 [Get Started](README.md)
 
 <!-- 背景图片 -->

@@ -15,7 +15,7 @@
 window.$docsify = {
 	logo: 'idea.svg',   // 配置网站logo '/_media/icon.svg'
 	name: 'uewiki',       // 文档标题，会显示在侧边栏顶部
-	nameLink: '/',  // 文档标题链接，可配置路由 详见：https://docsify.js.org/#/zh-cn/configuration?id=namelink
+	nameLink: './',  // 文档标题链接，可配置路由 详见：https://docsify.js.org/#/zh-cn/configuration?id=namelink
 	// themeColor: '#3F51B5',    // 配置主题颜色
 	// repo: 'https://github.com/popdo/uewiki.git', // 右上角图标
 	// homepage: 'home.md', // 手动指定首页，默认 README.md,也可以直接填写互联网的.md的url地址
@@ -42,6 +42,15 @@ window.$docsify = {
 	// notFoundPage: true,   // 开启404功能，需手动添加文件_404.md
 	topMargin: 90, // default: 0 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏
 	formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+	
+	// docsify-copy-code 代码复制插件配置
+	copyCode: {
+		buttonText : 'Copy',
+		errorText  : 'Error',
+		successText: 'Copied'
+	},
+
+	// 自建插件
 	plugins: [
 		// 页尾插件
 		function(hook) {
@@ -78,15 +87,20 @@ window.$docsify = {
 }
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+<!-- emoji 解析插件 -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 
-<!-- 加载图片缩放插件：忽略某张图片写法：![](image.png ":no-zoom") -->
+<!-- 图片缩放插件：忽略某张图片写法：![](image.png ":no-zoom") -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
 <!-- 代码复制功能 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 
-<!-- 添加prism代码高亮支持的语法：默认已经支持： -->
+<!-- 全文检索功能插件 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+<!-- 追加prism代码高亮支持的语法：bash、php -->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 

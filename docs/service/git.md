@@ -26,6 +26,7 @@ git commit -m "注释"
 **3. git push 上传，可能会让你输入github账号和密码按提示输入即可**
 ```bash
 git push
+# git push是git push origin master的简写，如果要使用git push 你就要保证你的绑定的远程仓库只有一个，并且只有一个分支
 ```
 
 ## 本地新库同步到github新仓库
