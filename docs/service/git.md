@@ -1,6 +1,6 @@
 # git命令
 
-## 一、拉取Git项目到本地
+## 拉取Git项目到本地
 
 **1. 打开终端，cd到自己想要存放项目的文件夹**
 ```bash
@@ -13,7 +13,7 @@ git clone https://github.com/popdo/uewiki.git
 ```
 **3.项目拉取成功。**
 
-## 二、项目改动后上传到GitHub
+## 项目改动后上传到GitHub
 
 **1. git add 你改动后的文件,如果想要全部上传 git add .**
 ```bash
@@ -28,7 +28,23 @@ git commit -m "注释"
 git push
 ```
 
-## 三、git命令
+## 本地新库同步到github新仓库
+
+```bash
+git init
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/popdo/wiki.github.io.git
+git push -u origin master
+```
+## 本地现有库同步到github新仓库
+```bash
+git remote add origin https://github.com/popdo/wiki.github.io.git
+git branch -M master
+git push -u origin master
+```
+
+## git命令
 查询当前远程的版本
 ```bash
 git remote -v
