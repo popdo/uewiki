@@ -19,10 +19,10 @@ window.$docsify = {
 	repo: '',
 	// homepage: 'home.md', // 手动指定首页，默认 README.md,也可以直接填写互联网的.md的url地址
 	coverpage: true,    // 开启封面
-	onlyCover: false,   // 只在首页时加载封面
+	onlyCover: true,   // 只在首页时加载封面
 	loadNavbar: true,   // 开启导航条
 	loadSidebar: true,  // 开启侧边导航
-	autoHeader: true,   // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
+	// autoHeader: true,   // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
 	// hideSidebar: true,   // 完全关闭侧边栏
 	// onlyCover: true,   // 封面作为独立首页
 	// coverpage: ['/', '/zh-cn/'],   // 多个封面：每个目录独立封面
@@ -55,7 +55,7 @@ window.$docsify = {
 		function(hook, vm) {
 			hook.beforeEach(function(html) {
 				var url =
-				'https://github.com/docsifyjs/docsify/blob/master/docs/' +
+				'https://github.com/popdo/uewiki/tree/master/docs/' +
 				vm.route.file;
 				var editHtml = '[📝 编辑文档](' + url + ')\n';
 
