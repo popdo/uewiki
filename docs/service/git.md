@@ -45,7 +45,7 @@ git branch -M master
 git push -u origin master
 ```
 
-## git命令
+## git常用命令
 查询当前远程的版本
 ```bash
 git remote -v
@@ -95,14 +95,23 @@ git diff
 git branch
 ```
 
-```bash
+## git配置邮箱、用户名
 
+用户名和邮箱地址是本地git客户端的一个变量 . 用户每次提交代码都会记录用户名和邮箱
+> 这里的用户名和邮箱务必填写正确，错误的话重置貌似非常麻烦。
+```bash
+# 全局配置邮箱
+git config --global user.email "xxx@qq.com"
+
+# 全局配置用户名
+git config --global user.name "popdo"
 ```
-
+查看用户名和密码
 ```bash
-
+git config user.name
+git config user.email
 ```
-
+查看其他配置信息(git设置列表)
 ```bash
-
+git config --list   
 ```
