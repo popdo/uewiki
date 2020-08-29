@@ -6,12 +6,36 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="description" content="Description">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="bootstrap5/assets/css/all.min.css">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 	<link rel="icon" href="idea.svg" sizes="32x32">
+	<style>
+		button,button:focus{outline: none;}
+		hr{opacity: 1;}
+		.blockquote{font-size:inherit}
+		.docsify-tabs--classic .docsify-tabs__tab--active{box-shadow: none;}
+		.docsify-copy-code-button{font-family: Arial;}
+		.demo-box{margin-bottom:-1.2em}
+	</style>
 </head>
 <body>
 <div id="app"></div>
+<!-- Import mermaid -->
+<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"> -->
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/mermaid@8.7.0/dist/mermaid.min.js"></script> -->
 <script>
+
+// 支持mermaid脑图 官方网址：https://mermaid-js.github.io/mermaid/ 
+var num = 0;
+const conf = {
+	logLevel:4,
+	startOnLoad: false,
+	themeCSS:'.label { font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif; } .node rect{fill:#fff;stroke: #999;} .edgePath .path{stroke:#999;stroke-width:1px}'
+};
+mermaid.initialize(conf);
+// -----------------------------------------------------------------
+// 系统配置
 window.$docsify = {
 	logo: 'idea.svg',   // 配置网站logo '/_media/icon.svg'
 	name: 'uewiki',       // 文档标题，会显示在侧边栏顶部
@@ -32,24 +56,85 @@ window.$docsify = {
 	// onlyCover: true,   // 封面作为独立首页
 	// coverpage: ['/', '/zh-cn/'],   // 多个封面：每个目录独立封面
 	maxLevel: 3,   // 渲染层级
-	subMaxLevel: 2,	// 自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
+	subMaxLevel: 3,	// 自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
 	// auto2top: true,   // 切换页面后是否自动跳转到页面顶部
 	// basePath: '/path/',   // 整站文档根路径，可以是二级路径或者是其他域名的路径 例如：'https://docsify.js.org/'
 	// relativePath: true,   // 启用网址结构相对路径（默认：false）详见：https://docsify.js.org/#/zh-cn/configuration?id=relativepath
-	mergeNavbar: true,    // 移动端设备下 合并顶部导航栏到侧边栏
+	// mergeNavbar: true,    // 移动端设备下 合并顶部导航栏到侧边栏
 	// externalLinkTarget: '_self', // default: '_blank' 外部链接的打开方式
 	// cornerExternalLinkTarget: '_self', // default: '_blank' 右上角链接的打开方式
 	// notFoundPage: true,   // 开启404功能，需手动添加文件_404.md
 	topMargin: 90, // default: 0 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏
 	formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+	// -----------------------------------------------------------------
+	// 全文检索插件配置
+	search: {
+        noData:'没有结果!',
+        paths: 'auto',
+        placeholder:'搜索...'
+    },
+	// -----------------------------------------------------------------
+	// markdown配置
+	markdown: {
+		renderer: {
+			code: function(code, lang) {
+				// 让markdown支持mermaid脑图插件
+				if (lang === "mermaid") {
+					return (
+						'<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+					);
+				}
+				// 让markdown支持自定义的代码块code解析
+				if (lang === "demo") {
+					return (
+						'<div class="demo-box border p-3">' + code + "</div>"
+					);
+				}
+				return this.origin.code.apply(this, arguments);
+			}
+		}
+	},
 	
+	// -----------------------------------------------------------------
 	// docsify-copy-code 代码复制插件配置
 	copyCode: {
 		buttonText : 'Copy',
 		errorText  : 'Error',
 		successText: 'Copied'
 	},
-
+	// -----------------------------------------------------------------
+	// flexible-alerts 插件配置
+	// 'flexible-alerts': {
+	// 	style: 'flat',
+	// 	note: {
+	// 		label: "注意"
+	// 	},
+	// 	tip: {
+	// 		label: "提示"
+	// 	},
+	// 	warning: {
+	// 		label: "警告"
+	// 	},
+	// 	danger: {
+	// 		label: "错误"
+	// 	},
+	// 	// 可以添加更多自定义标签
+	// 	hello:{
+	// 		label:'hello',
+	// 		icon: "fas fa-comment",
+    //     	className: "info"
+	// 	}
+    // },
+	// -----------------------------------------------------------------
+	// docsify-tabs插件
+	tabs: {
+		// persist    : false,
+		// sync       : false,
+		// theme      : 'material',	// 下划线风格
+		// tabComments: false,
+		// tabHeadings: false
+	},
+	// -----------------------------------------------------------------
 	// 自建插件
 	plugins: [
 		// 页尾插件
@@ -85,11 +170,12 @@ window.$docsify = {
 		}
 	]
 }
+
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
 <!-- emoji 解析插件 -->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script> -->
 
 <!-- 图片缩放插件：忽略某张图片写法：![](image.png ":no-zoom") -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
@@ -100,9 +186,16 @@ window.$docsify = {
 <!-- 全文检索功能插件 -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
-<!-- 追加prism代码高亮支持的语法：bash、php -->
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+<!-- 追加prism代码高亮支持的语法：bash、json、php -->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script> -->
 
+<!-- docsify-tabs插件 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-tabs"></script>
+
+<!-- flexible-alerts插件 -->
+<!-- <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script> -->
 </body>
 </html>

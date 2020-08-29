@@ -1,0 +1,27 @@
+/*!
+ * Jim style
+ * Copyright 2019 The jim Authors
+ * update 2019-7-19
+ */ 
+
+@import "scss/fun";         // 函数
+@import "scss/var";         // 变量
+@import "scss/reset";       // 重置
+@import "scss/jimstrap";    // bootscript4
+
+@import "scss/navbar";      // 导航菜单
+@import "scss/dropdown";    // 下拉菜单
+@import "scss/nav-y";       // 垂直菜单
+@import "scss/forms";       // 表单 
+@import "scss/form_cust";   // 自定义表单项 
+@import "scss/group_boxed";      // 群组
+@import "scss/btn";         // 按钮
+@import "scss/table";       // 表格
+@import "scss/tag";         // 标签
+@import "scss/card";        // 卡片
+@import "scss/animate";     // 动画库
+@import "scss/msg";         // 消息
+@import "scss/ibox";
+@import "scss/element";      // 元素
+@import "scss/post";        // 文章
+@import "scss/bootstrap_hack";      // hack

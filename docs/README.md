@@ -16,3 +16,4 @@ function getAdder(int $x): int
     return 123;
 }
 ```
+

@@ -1,94 +1,201 @@
 # docsify配置
 
-index.html配置
+## flexible-alerts插件
+
+- [插件地址](https://github.com/fzankl/docsify-plugin-flexible-alerts)
+
+**效果：**
+
+> [!NOTE]
+> An alert of type 'note' using global style 'callout'.
+
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
+
+> [!WARNING]
+> An alert of type 'warning' using global style 'callout'.
+
+> [!DANGER]
+> An alert of type 'danger' using global style 'callout'.
+
+> [!HELLO]
+> 这是自定义的标签效果.
+
+**语法：**
+
+```md
+> [!NOTE]
+> An alert of type 'note' using global style 'callout'.
+
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
+
+> [!WARNING]
+> An alert of type 'warning' using global style 'callout'.
+
+> [!DANGER]
+> An alert of type 'danger' using global style 'callout'.
+```
+
+**配置方法：**
+
+1、引入js
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>ue-wiki</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="description" content="Description">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-</head>
-<body>
-<div id="app"></div>
-<script>
+<!-- flexible-alerts -->
+<script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
+```
+
+2、配置docsify中展示的样式
+```js
 window.$docsify = {
-	logo: 'https://docsify.js.org/_media/icon.svg',   // 配置网站logo '/_media/icon.svg'
-	name: 'uewiki',       // 文档标题，会显示在侧边栏顶部
-	nameLink: 'http://localhost/uewiki/docs/#/',  // 文档标题链接，可配置路由 详见：https://docsify.js.org/#/zh-cn/configuration?id=namelink
-	// themeColor: '#3F51B5',    // 配置主题颜色
-	repo: '',
-	// homepage: 'home.md', // 手动指定首页，默认 README.md,也可以直接填写互联网的.md的url地址
-	coverpage: true,    // 开启封面
-	onlyCover: true,   // 只在首页时加载封面
-	loadNavbar: true,   // 开启导航条
-	loadSidebar: true,  // 开启侧边导航
-	// autoHeader: true,   // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
-	// hideSidebar: true,   // 完全关闭侧边栏
-	// onlyCover: true,   // 封面作为独立首页
-	// coverpage: ['/', '/zh-cn/'],   // 多个封面：每个目录独立封面
-	// maxLevel: 3,   // 渲染层级
-	// auto2top: true,   // 切换页面后是否自动跳转到页面顶部
-	// basePath: '/path/',   // 整站文档根路径，可以是二级路径或者是其他域名的路径 例如：'https://docsify.js.org/'
-	// relativePath: true,   // 启用网址结构相对路径（默认：false）详见：https://docsify.js.org/#/zh-cn/configuration?id=relativepath
-	mergeNavbar: true,    // 移动端设备下 合并顶部导航栏到侧边栏
-	// externalLinkTarget: '_self', // default: '_blank' 外部链接的打开方式
-	// cornerExternalLinkTarget: '_self', // default: '_blank' 右上角链接的打开方式
-	// notFoundPage: true,   // 开启404功能，需手动添加文件_404.md
-	topMargin: 90, // default: 0 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏
-
-	plugins: [
-		// 页尾插件
-		function(hook) {
-			var footer = [
-				'<hr/>',
-				'<footer>',
-				'<span><a href="https://lee.cm">Jim</a> &copy;2020.</span>',
-				'<span>Power by <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
-				'</footer>'
-			].join('');
-
-			hook.afterEach(function(html) {
-			return html + footer;
-			});
+	'flexible-alerts': {
+		style: 'flat',
+		note: {
+			label: "注意"
 		},
-		// 编辑按钮插件
-		function(hook, vm) {
-			hook.beforeEach(function(html) {
-				var url =
-				'https://github.com/popdo/uewiki/tree/master/docs/' +
-				vm.route.file;
-				var editHtml = '[📝 编辑文档](' + url + ')\n';
-
-				return (
-				editHtml +
-				html +
-				'\n----\n' +
-				'Last modified {docsify-updated} ' +
-				editHtml
-				);
-			});
+		tip: {
+			label: "提示"
+		},
+		warning: {
+			label: "警告"
+		},
+		danger: {
+			label: "错误"
+		},
+		// 可以添加更多自定义标签
+		hello:{
+			label:'hello',
+			icon: "fas fa-comment",
+			className: "hello"
 		}
-	]
+	}
+};
+```
+
+## docsify-tabs插件
+
+- [插件地址](https://github.com/jhildenbiddle/docsify-tabs)
+
+**效果：**
+<!-- tabs:start -->
+
+#### ** Title1 **
+
+Hello!
+
+#### ** Title2 **
+
+Bonjour!
+
+#### ** Title3 **
+
+Ciao!
+
+<!-- tabs:end -->
+
+**语法：**
+```markdown
+<!-- tabs:start -->
+
+#### ** Title1 **
+
+Hello!
+
+#### ** Title2 **
+
+Bonjour!
+
+#### ** Title3 **
+
+Ciao!
+
+<!-- tabs:end -->
+```
+
+**配置：**
+
+```html
+<!-- docsify-tabs 插件 -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-tabs"></script>
+```
+
+```js
+window.$docsify = {
+	// docsify-tabs插件
+	tabs: {
+		// persist    : false,
+		// sync       : false,
+		// theme      : 'material',	// 下划线风格
+		// tabComments: false,
+		// tabHeadings: false
+	},
+};
+```
+
+```css
+/* 美化默认样式 */
+.docsify-tabs--classic .docsify-tabs__tab--active{box-shadow: none;}
+```
+
+## 支持mermaid脑图插件
+
+- [插件地址](https://mermaid-js.github.io/mermaid/)
+
+**效果：**
+
+```mermaid
+pie title 配置完成度
+         "已完成" : 90
+         "未完成" : 10
+```
+
+```mermaid
+	graph TD
+	A(工业用地效率)-->B1(土地利用强度)
+	A-->B2(土地经济效益)
+	B1-->C1(容积率)
+	B1-->C2(建筑系数)
+	B1-->C3(亩均固定资本投入)
+	B2-->D1(亩均工业产值)
+	B2-->D2(亩均税收)
+```
+
+**配置**
+
+1、引入插件js(需在以下配置之前引入)
+```html
+<!-- markdown支持mermaid脑图插件 -->
+<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"> -->
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+```
+
+2、配置插件样式
+```js
+// markdown支持mermaid脑图插件
+var num = 0;
+const conf = {
+	logLevel:4,
+	startOnLoad: false,
+	themeCSS:'.label { font-family: Source Sans Pro,Helvetica Neue,Arial,sans-serif; } .node rect{fill:#fff;stroke: #999;} .edgePath .path{stroke:#999;stroke-width:1px}'
+};
+mermaid.initialize(conf);
+```
+
+3、配置docsify
+```js
+window.$docsify = {
+	// markdown支持mermaid脑图插件
+	markdown: {
+		renderer: {
+			code: function(code, lang) {
+				if (lang === "mermaid") {
+					return (
+					'<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+					);
+				}
+				return this.origin.code.apply(this, arguments);
+			}
+		}
+	},
 }
-</script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-
-<!-- 加载图片缩放插件：忽略某张图片写法：![](image.png ":no-zoom") -->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-
-<!-- 代码复制功能 -->
-<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-
-<!-- 添加prism代码高亮支持的语法：默认已经支持： -->
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-
-</body>
-</html>
-
 ```

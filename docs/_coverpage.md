@@ -1,12 +1,12 @@
 <!-- ![logo](_media/icon.svg) -->
 
-# bootstrap5 <small>3.5</small>
+# Ue-Wiki <small>v1.0</small>
 
-> 一个神奇的文档网站生成器。
+> 个人前端笔记、知识库
 
-- 简单、轻便 (压缩后 ~21kB)
-- 无需生成 html 文件
-- 众多主题
+- 简洁是智慧的灵魂
+- 繁冗是肤浅的躁装
+- ……
 
 [GitHub](https://github.com/popdo/uewiki/)
 [Get Started](README.md)

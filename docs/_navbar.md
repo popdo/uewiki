@@ -1,8 +1,8 @@
-* 入门
+* Tools
 
-  * [快速开始](zh-cn/quickstart.md)
-  * [多页文档](zh-cn/more-pages.md)
-  * [定制导航栏](zh-cn/custom-navbar.md)
+  * [表格生成器](https://www.tablesgenerator.com/markdown_tables)
+  * [代码压缩、格式化](http://tool.chinaz.com/tools/jsformat.aspx?qq-pf-to=pcqq.c2c)
+  * [大小写转换](zh-cn/custom-navbar.md)
   * [封面](zh-cn/cover.md)
 
 

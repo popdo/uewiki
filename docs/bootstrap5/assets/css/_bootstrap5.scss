@@ -1,0 +1,54 @@
+/*!
+ * Bootstrap v5.0.0-alpha1 (https://v5.getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+
+// 创建日期：2020.8.27
+// 修改日期：2020.8.27
+
+@import "bootstrap5-scss/functions";
+@import "bootstrap5-scss/variables";
+@import "bootstrap5-scss/mixins";
+@import "bootstrap5-scss/utilities";
+
+// Layout & components
+@import "bootstrap5-scss/root";
+@import "bootstrap5-scss/reboot";
+@import "bootstrap5-scss/type";
+@import "bootstrap5-scss/images";
+@import "bootstrap5-scss/containers";
+@import "bootstrap5-scss/grid";
+@import "bootstrap5-scss/tables";
+@import "bootstrap5-scss/forms";
+@import "bootstrap5-scss/buttons";
+@import "bootstrap5-scss/transitions";      // 过度效果插件
+@import "bootstrap5-scss/dropdown";
+@import "bootstrap5-scss/button-group";
+@import "bootstrap5-scss/nav";
+@import "bootstrap5-scss/navbar";
+@import "bootstrap5-scss/card";
+@import "bootstrap5-scss/breadcrumb";
+@import "bootstrap5-scss/pagination";
+@import "bootstrap5-scss/badge";
+@import "bootstrap5-scss/alert";
+@import "bootstrap5-scss/progress";     // 进度条
+@import "bootstrap5-scss/list-group";
+@import "bootstrap5-scss/close";
+@import "bootstrap5-scss/toasts";       // 消息通知插件
+@import "bootstrap5-scss/modal";        // 模态框（弹窗）
+@import "bootstrap5-scss/tooltip";      // 提示冒泡
+@import "bootstrap5-scss/popover";      // 弹出框
+@import "bootstrap5-scss/carousel";     // 轮播图
+@import "bootstrap5-scss/spinners";     // loading动画图标
+
+// Helpers
+@import "bootstrap5-scss/helpers";
+
+// Utilities
+@import "bootstrap5-scss/utilities/api";    // 内置大量样式表,预计50-60kb
+// scss-docs-end import-stack
