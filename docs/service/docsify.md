@@ -240,3 +240,7 @@ window.$docsify = {
     },
 }
 ```
+
+## 更多插件
+
+参考 [awesome-docsify](https://github.com/docsifyjs/awesome-docsify)
