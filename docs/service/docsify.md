@@ -244,3 +244,26 @@ window.$docsify = {
 ## 更多插件
 
 参考 [awesome-docsify](https://github.com/docsifyjs/awesome-docsify)
+
+## 忽略h2-h6标题
+
+当设置了 `subMaxLevel` 时，默认情况下每个标题都会自动添加到侧边栏目录中。如果你想忽略特定的标题不显示，可以给它添加 `<!-- {docsify-ignore} -->`。
+
+```markdown
+# Getting Started
+
+## Header <!-- {docsify-ignore} -->
+
+该标题不会出现在侧边栏的目录中。
+```
+
+要忽略特定页面上的所有标题，你可以在页面的第一个标题上使用 `<!-- {docsify-ignore-all} --> `。
+
+```markdown
+# Getting Started <!-- {docsify-ignore-all} -->
+
+## Header
+
+该页面所有标题不会出现在侧边栏的目录中。
+```
+

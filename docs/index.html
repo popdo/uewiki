@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="bootstrap5/assets/css/vue.css">
 	<link rel="icon" href="idea.svg" sizes="32x32">
 	<style>
+		/* 兼容bootstrap5 */
 		button,button:focus{outline: none;}
 		hr{opacity: 1;}
 		.blockquote{font-size:inherit}
@@ -18,6 +19,10 @@
 		.demo-box{margin-bottom:-1.2em}
 		.markdown-section .btn-primary{color:#fff}
 		a:hover{color: var(--theme-color,#42b983);}
+		.sidebar-nav .collapse{display: block;}
+		/* 美化3级菜单 */
+		.app-sub-sidebar .app-sub-sidebar li::before{content: "·"}
+		.app-sub-sidebar .app-sub-sidebar li a{color:#888}
 
 	</style>
 </head>
@@ -47,17 +52,18 @@ window.$docsify = {
 	// repo: 'https://github.com/popdo/uewiki.git', // 右上角图标
 	// homepage: 'home.md', // 手动指定首页，默认 README.md,也可以直接填写互联网的.md的url地址
 	coverpage: true,    // 开启封面
-	onlyCover: true,   // 只在首页时加载封面
+	// onlyCover: true,   // 只在首页时加载封面
 	loadNavbar: true,   // 开启导航条
 	loadSidebar: true,  // 开启侧边导航
-	alias: {	// 配置 alias 避免不必要的回退过程
-      '/.*/_sidebar.md': '/_sidebar.md',
+	// 配置路由规则
+	alias: {
+      '/.*/_sidebar.md': '/_sidebar.md',// 配置 alias 避免不必要的回退过程
 	  '/.*/_navbar.md': '/_navbar.md'
     },
 	// autoHeader: true,   // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
 	// hideSidebar: true,   // 完全关闭侧边栏
 	// onlyCover: true,   // 封面作为独立首页
-	maxLevel: 3,   // 渲染h1~h6目录层级
+	maxLevel: 6,   // 渲染h1~h6目录层级
 	subMaxLevel: 3,	// 自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
 	auto2top: true,   // 切换页面后是否返回顶部
 	// basePath: '/path/',   // 整站文档根路径，可以是二级路径或者是其他域名的路径 例如：'https://docsify.js.org/'
