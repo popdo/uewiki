@@ -7,7 +7,8 @@
 	<meta name="description" content="Description">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="bootstrap5/assets/css/all.min.css">
-	<link rel="stylesheet" href="bootstrap5/assets/css/vue.css">
+	<!-- <link rel="stylesheet" href="bootstrap5/assets/css/vue.css"> -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue">
 	<link rel="icon" href="idea.svg" sizes="32x32">
 	<style>
 		/* 兼容bootstrap5 */
@@ -17,12 +18,23 @@
 		.docsify-tabs--classic .docsify-tabs__tab--active{box-shadow: none;}
 		.docsify-copy-code-button{font-family: Arial;}
 		.demo-box{margin-bottom:-1.2em}
+		.docsify-tabs .demo-box{margin-bottom:-1em}
 		.markdown-section .btn-primary{color:#fff}
 		a:hover{color: var(--theme-color,#42b983);}
 		.sidebar-nav .collapse{display: block;}
 		/* 美化3级菜单 */
 		.app-sub-sidebar .app-sub-sidebar li::before{content: "·"}
 		.app-sub-sidebar .app-sub-sidebar li a{color:#888}
+		/* 优化手机端宽度 */
+		@media screen and (max-width: 768px){
+			.markdown-section{max-width:90%}
+		}
+
+		summary:focus{outline: none;}
+
+			li.collapse .app-sub-sidebar {
+      display: none;
+    }
 
 	</style>
 </head>
@@ -63,7 +75,7 @@ window.$docsify = {
 	// autoHeader: true,   // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
 	// hideSidebar: true,   // 完全关闭侧边栏
 	// onlyCover: true,   // 封面作为独立首页
-	maxLevel: 6,   // 渲染h1~h6目录层级
+	maxLevel: 3,   // 渲染h1~h6目录层级
 	subMaxLevel: 3,	// 自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
 	auto2top: true,   // 切换页面后是否返回顶部
 	// basePath: '/path/',   // 整站文档根路径，可以是二级路径或者是其他域名的路径 例如：'https://docsify.js.org/'
