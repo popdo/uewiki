@@ -16,20 +16,24 @@
 |标签|类名支持|说明|示例|
 |---|-------|---|----|
 |`<code>`||内联代码|`.cc{color:#ccc}`|
-|`<pre>`<br>`<code>...</code>`<br>`</pre>`||代码块||
+|`<pre>`<br>`<code>...</code>`<br>`</pre>`||代码块|<pre><code>$text="hello";<br>echo $text</code></pre>|
 |`<var>`||变量|<var>var</var>|
 |`<kbd>`||键盘符|<kbd>Shift</kbd>|
 |`<samp>`||是一个短语标签，用来定义计算机程序的样本文本|<samp>样本文本</samp>|
 |`<address>`||地址|<address><a href="mailto:first.last@example.com">first.last@example.com</a></address>|
 |`<abbr>`||标记一个简称、缩写|Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.|
 |`<blockquote>`|.blockquote|引用文档中其他来源的内容块，更详细查看[官方文档](https://v5.getbootstrap.com/docs/5.0/content/typography/#blockquotes)|<blockquote>小鸟飞的很高，很远...</blockquote>|
-|`<mark>`||表示标记或突出显示以供参考或表示的文本。||
+|`<mark>`||表示标记或突出显示以供参考或表示的文本。|<mark>highlight</mark>|
 |`<small>`||代表旁注和小字体，如版权和法律文本。||
-|`<s>`||表示不再相关或不再准确的元素。||
-|`<u>`||表示应以指示其具有非文本批注的方式呈现的内联文本的范围。||
-|`<b>`||为了突出单词或短语而不传达额外的重要性||
-|`<em>`||||
-|`<i>`||主要用于语音、技术术语等||
+|`<del>`||删除线：表示不再相关或不再准确的元素。|<del>开发一个blog系统</del>|
+|`<u>`||下划线：在非链接元素上少用，容易与链接混淆。|<u>Hello!</u>|
+|`<strong>`||加粗：表示强调。强调性高于em||
+|`<b>`||加粗：单纯的加粗||
+|`<em>`||斜体：含语意-一般的强调文本||
+|`<i>`||斜体：无语意||
+|`<br>`||是HTML写法||
+|`<br/>`||是XHTML1.1的写法，也是XML写法。||
+|`<br />`||是XHTML为兼容HTML的写法，也是XML写法||
 
 ## 版式设计
 
