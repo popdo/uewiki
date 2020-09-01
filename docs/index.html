@@ -149,11 +149,11 @@ window.$docsify = {
 	// -----------------------------------------------------------------
 	// docsify-tabs插件
 	tabs: {
-		// persist    : false,
-		// sync       : false,
+		// persist    : false,	// 页面刷新/重新访问后是否恢复选项卡选择 默认true
+		// sync       : false, // 默认 true
 		// theme      : 'material',	// 下划线风格
-		// tabComments: false,
-		// tabHeadings: false
+		// tabComments: false,	// 使用 <!-- tab:title --> 的方式作为面板分割
+		// tabHeadings: false	// 使用 ### **title** 的方式作为tab面板分割
 	},
 	// -----------------------------------------------------------------
 	// 自建插件
@@ -164,7 +164,7 @@ window.$docsify = {
 				'<hr/>',
 				'<footer>',
 				'<span><a href="https://lee.cm">Jim</a> &copy;2020.</span>',
-				'<span>Power by <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+				'<span>Power by <a href="https://docsify.js.org/#/zh-cn/" target="_blank">docsify</a>.</span>',
 				'</footer>'
 			].join('');
 

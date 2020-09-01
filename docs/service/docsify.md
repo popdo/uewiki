@@ -5,6 +5,7 @@
 > 我们在写技术文档很多时候需要插入一大堆html演示示例的代码，而每处代码都有相同的html结构，这时候我们就可以通过配置markdown的`renderer`来实现输入特定的语句自动编译成html代码。
 
 1、我们在docsify中进行配置markdown的code：
+
 ```js
 window.$docsify = {
     // markdown配置
@@ -23,6 +24,7 @@ window.$docsify = {
     },
 };
 ```
+
 2、我们在markdown中书写的语法：
 
 ````md
@@ -30,6 +32,7 @@ window.$docsify = {
 您的内容...
 ```
 ````
+
 3、解析出来的html结构是：
 
 ```demo
@@ -81,12 +84,14 @@ window.$docsify = {
 **配置方法：**
 
 1、引入js
+
 ```html
 <!-- flexible-alerts -->
 <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
 ```
 
 2、配置docsify中展示的样式
+
 ```js
 window.$docsify = {
     'flexible-alerts': {
@@ -118,35 +123,38 @@ window.$docsify = {
 - [插件地址](https://github.com/jhildenbiddle/docsify-tabs)
 
 **效果：**
+
 <!-- tabs:start -->
 
-#### ** Title1 **
+### **Title1**
 
 Hello!
 
-#### ** Title2 **
+### **Title2**
 
 Bonjour!
 
-#### ** Title3 **
+### **Title3**
 
 Ciao!
 
 <!-- tabs:end -->
 
 **语法：**
+
 ```markdown
+
 <!-- tabs:start -->
 
-#### ** Title1 **
+### **Title1**
 
 Hello!
 
-#### ** Title2 **
+### **Title2**
 
 Bonjour!
 
-#### ** Title3 **
+### **Title3**
 
 Ciao!
 
@@ -201,9 +209,10 @@ pie title 配置完成度
     B2-->D2(亩均税收)
 ```
 
-**配置**
+**配置:**
 
 1、引入插件js(需在以下配置之前引入)
+
 ```html
 <!-- markdown支持mermaid脑图插件 -->
 <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"> -->
@@ -211,6 +220,7 @@ pie title 配置完成度
 ```
 
 2、配置插件样式
+
 ```js
 // markdown支持mermaid脑图插件
 var num = 0;
@@ -223,6 +233,7 @@ mermaid.initialize(conf);
 ```
 
 3、配置docsify
+
 ```js
 window.$docsify = {
     // markdown支持mermaid脑图插件

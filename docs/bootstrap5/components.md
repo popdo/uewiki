@@ -8,7 +8,7 @@
 
 <!-- tabs:start -->
 
-#### ** 徽章颜色样式 **
+### **徽章颜色样式**
 
 ```demo
 <span class="badge bg-primary">Primary</span>
@@ -39,9 +39,10 @@
 <span class="badge rounded-pill bg-secondary">Secondary</span>
 <span class="badge rounded-pill bg-success">Success</span>
 ```
+
 浅色背景的徽章需要 `.text-{color}`类来辅助定义文字颜色
 
-#### ** 匹配父元素大小 **
+### **匹配父元素大小**
 
 ```demo
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -61,7 +62,7 @@
 <h6>Example heading <span class="badge bg-secondary">New</span></h6>
 ```
 
-#### ** 结合按钮使用 **
+### **结合按钮使用**
 
 ```demo
 <button type="button" class="btn btn-primary">
@@ -136,6 +137,7 @@
   </ol>
 </nav>
 ```
+
 面包屑导航中我们最好添加一个有意义的标签，如`aria-label="breadcrumb"`来描述`<nav>`元素中提供的导航类型，并将`aria-current="page"`应用到集合的最后一项，以指示它表示当前页。
 
 **更换分割符：**
@@ -185,7 +187,7 @@ $breadcrumb-divider: none;
 
 <!-- tabs:start -->
 
-#### ** 普通效果 **
+### **普通效果**
 
 ```demo
 <nav aria-label="Page navigation example">
@@ -211,7 +213,7 @@ $breadcrumb-divider: none;
 </nav>
 ```
 
-#### ** 使用icon **
+### **使用icon**
 
 想要在某些分页链接中使用图标或符号代替文本？ 只要确保提供具有`aria`属性。
 
@@ -255,7 +257,7 @@ $breadcrumb-divider: none;
 </nav>
 ```
 
-#### ** 禁用和活动状态 **
+### **禁用和活动状态**
 
 - 分页链接可针对不同情况进行自定义。 使用`.disabled`表示不可点击的链接，`.active`表示当前页面。
 - 尽管`.disabled`类可以使用`pointer-events：none`来尝试禁用`<a>`的链接功能，但是CSS属性尚未标准化，因此不能用于键盘导航。 因此，您应始终在禁用的链接上添加`tabindex="-1"`，并使用自定义`JavaScript`完全禁用其功能。
@@ -336,7 +338,7 @@ $breadcrumb-divider: none;
 </nav>
 ```
 
-#### ** 尺寸大小 **
+### **尺寸大小**
 
 想要更大或更小的页码吗？添加`.pagination-lg`或`.pagination-sm`以获取其他尺寸。
 
@@ -402,7 +404,7 @@ $breadcrumb-divider: none;
 </nav>
 ```
 
-#### ** 水平对齐 **
+### **水平对齐**
 
 居中对齐 ul`.justify-content-center`
 
@@ -471,7 +473,7 @@ $breadcrumb-divider: none;
 [查看nav中示例](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/#example-in-navbar)  
 [查看list-group中示例](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/#example-with-list-group)
 
-#### 通过data属性使用
+### 通过data属性使用
 
 要方便地将滚动监听(scrollspy)行为添加到顶栏导航中，请将`data-spy="scroll"`添加到要监视的元素（最典型的是`<body>`）。然后将`nav`组件的父元素的ID或类添加`data-target`属性。
 
@@ -493,7 +495,7 @@ body {
 </body>
 ```
 
-#### 通过JavaScript使用
+### 通过JavaScript使用
 
 在CSS中添加`position:relative`之后，通过JavaScript调用滚动监听(scrollspy)：
 
@@ -505,9 +507,9 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 
 !> 不可见的目标元素将被忽略，它们对应的导航项永远不会被突出显示。
 
-#### methods方法
+### methods方法
 
-##### 刷新
+#### 刷新
 
 将滚动监听(scrollspy)与添加或删除DOM中的元素结合使用时，需要调用`refresh`方法，如下所示：
 
@@ -519,7 +521,7 @@ dataSpyList.forEach(function (dataSpyEl) {
 })
 ```
 
-##### 获取实例
+#### 获取实例
 
 静态方法，该方法允许您获取与DOM元素关联的滚动监听(scrollspy)实例
 
@@ -528,17 +530,17 @@ var scrollSpyContentEl = document.getElementById('content')
 var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
 ```
 
-##### 选项设置
+#### 选项设置
 
 选项可以通过data属性或JavaScript传递。对于data属性，将选项名称附加到`data-`，如`data-offset=""`。
 
 |Name|Type|Default|Description|
 |----|----|-------|-----------|
 |offset|number|10|计算滚动位置时从顶部偏移的像素。|
-|method|string|auto|找到被监视元素所在的区域。`auto`将选择获得滚动坐标的最佳方法。<br/>偏移量将使用元素[Element.getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 获取滚动坐标的方法。<br/>位置将使用[HTMLElement.offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop)以及[HTMLElement.offsetLeft](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft)属性获取滚动坐标。|
-|target|string <br/>jQuery<br/>object<br/>DOM<br/>element||指定要应用滚动监听(scrollspy)插件的元素。|
+|method|string|auto|找到被监视元素所在的区域。`auto`将选择获得滚动坐标的最佳方法。<br>偏移量将使用元素[Element.getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 获取滚动坐标的方法。<br>位置将使用[HTMLElement.offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop)以及[HTMLElement.offsetLeft](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft)属性获取滚动坐标。|
+|target|string <br>jQuery<br>object<br>DOM<br>element||指定要应用滚动监听(scrollspy)插件的元素。|
 
-##### 事件
+#### 事件
 
 |Event type|Description|
 |----------|-----------|
@@ -550,6 +552,3 @@ firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   // do something...
 })
 ```
-
-
-

@@ -1,6 +1,6 @@
 # 导航、导航条
 
-<hr>
+- - -
 
 ## Navs
 
@@ -12,7 +12,7 @@
 
 <!-- tabs:start -->
 
-#### ** ul导航 **
+#### **ul导航**
 
 ```demo
 <ul class="nav">
@@ -50,7 +50,7 @@
 
 ```
 
-#### ** ol导航 **
+#### **ol导航**
 
 ```demo
 <ol class="nav">
@@ -86,7 +86,7 @@
 </ol>
 ```
 
-#### ** a标签导航 **
+#### **a标签导航**
 
 ```demo
 <nav class="nav">
@@ -114,7 +114,7 @@ nav组件支持多种对齐方式，有这些：
 
 <!-- tabs:start -->
 
-#### ** 水平居中 **
+#### **水平居中**
 
 ```demo
 <ul class="nav justify-content-center">
@@ -153,7 +153,7 @@ nav组件支持多种对齐方式，有这些：
 
 ```
 
-#### ** 水平居右 **
+#### **水平居右**
 
 ```demo
 <ul class="nav justify-content-end">
@@ -190,7 +190,7 @@ nav组件支持多种对齐方式，有这些：
 </ul>
 ```
 
-#### ** 垂直排版 **
+#### **垂直排版**
 
 垂直排版支持媒体响应 `.flex-{xs|sm|md|lg|xl}-column`
 
@@ -229,7 +229,7 @@ nav组件支持多种对齐方式，有这些：
 </ul>
 ```
 
-#### ** tabs风格 **
+#### **tabs风格**
 
 ```demo
 <ul class="nav nav-tabs">
@@ -280,7 +280,7 @@ nav组件支持多种对齐方式，有这些：
 </ul>
 ```
 
-#### ** 药丸风格 **
+#### **药丸风格**
 
 ```demo
 <ul class="nav nav-pills">
@@ -331,7 +331,7 @@ nav组件支持多种对齐方式，有这些：
 </ul>
 ```
 
-#### ** 填充风格1 **
+#### **填充风格1**
 
 ```demo
 <ul class="nav nav-pills nav-fill">
@@ -368,7 +368,7 @@ nav组件支持多种对齐方式，有这些：
 </ul>
 ```
 
-#### ** 填充风格2 **
+#### **填充风格2**
 
 ```demo
 <ul class="nav nav-pills nav-justified">
@@ -405,7 +405,7 @@ nav组件支持多种对齐方式，有这些：
 </ul>
 ```
 
-#### ** 配合flex工具 **
+#### **配合flex工具**
 
 如果您需要响应式导航变体，请考虑使用一系列flexbox实用工具。虽然这些实用工具更详细，但它们提供了跨响应断点的更大定制。在下面的例子中，我们的导航将堆叠在最低的断点上，然后调整水平布局，从小断点开始填充可用宽度。
 
@@ -451,6 +451,7 @@ Navbars需要包含`.navbar`和`.navbar-expand{-sm |-md |-lg |-xl |-xxl}`用于�
 ### 导航条样式
 
 导航条的配色有两种：
+
 - `.navbar-light`浅色风格
 - `.navbar-dark`深色风格
 
@@ -561,7 +562,7 @@ Navbars需要包含`.navbar`和`.navbar-expand{-sm |-md |-lg |-xl |-xxl}`用于�
           <a class="nav-link" href="#">Link2</a>
         </li>
       </ul>
-      
+
       <!-- 表单元素 -->
       <div class="input-group w-auto mr-2">
         <span class="input-group-text" id="basic-addon1">@</span>
@@ -577,6 +578,7 @@ Navbars需要包含`.navbar`和`.navbar-expand{-sm |-md |-lg |-xl |-xxl}`用于�
   </div>
 </nav>
 ```
+
 </details>
 
 [查看更多示例](https://v5.getbootstrap.com/docs/5.0/examples/navbars/)
@@ -584,7 +586,6 @@ Navbars需要包含`.navbar`和`.navbar-expand{-sm |-md |-lg |-xl |-xxl}`用于�
 ### 居中式导航条
 
 若想让导航栏居中显示 我们可以在`<div class="collapse navbar-collapse">`容器上添加`.justify-content-{sm|md|lg|xl|xxl}-center`即可
-
 
 ```demo
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -633,7 +634,6 @@ Navbars需要包含`.navbar`和`.navbar-expand{-sm |-md |-lg |-xl |-xxl}`用于�
     </div>
 </nav>
 ```
-
 
 ### 折叠外部容器
 
@@ -696,7 +696,7 @@ Bootstrap增加了对大多数标准键盘菜单交互的内置支持，例如�
 
 <!-- tabs:start -->
 
-#### ** 按钮下拉 **
+#### **按钮下拉**
 
 ```demo
 <!-- 我是按钮 -->
@@ -726,7 +726,7 @@ Bootstrap增加了对大多数标准键盘菜单交互的内置支持，例如�
 </div>
 ```
 
-#### ** 链接下拉 **
+#### **链接下拉**
 
 ```demo
 <!-- 我是链接 -->
@@ -756,7 +756,7 @@ Bootstrap增加了对大多数标准键盘菜单交互的内置支持，例如�
 </div>
 ```
 
-#### ** 拆分下拉 **
+#### **拆分下拉**
 
 ```demo
 <!-- 拆分按钮 -->
@@ -800,7 +800,7 @@ Bootstrap增加了对大多数标准键盘菜单交互的内置支持，例如�
 
 <!-- tabs:start -->
 
-#### ** 向上 **
+#### **向上**
 
 通过向父元素添加`.dropup`来触发元素`向上`展开的下拉菜单。
 
@@ -854,7 +854,7 @@ Bootstrap增加了对大多数标准键盘菜单交互的内置支持，例如�
 </div>
 ```
 
-#### ** 向右 **
+#### **向右**
 
 通过向父元素添加`.dropright`来触发元素`向右`展开的下拉菜单。
 
@@ -908,7 +908,7 @@ Bootstrap增加了对大多数标准键盘菜单交互的内置支持，例如�
 </div>
 ```
 
-#### ** 向左 **
+#### **向左**
 
 通过向父元素添加`.dropleft`来触发元素`向左`展开的下拉菜单。
 
