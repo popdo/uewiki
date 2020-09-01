@@ -673,6 +673,20 @@ Bootstrap提供了 `pe-none` 和 `pe-auto`类来防止或添加元素交互。
 
 > 由于`margin`有负值，因此我们可以使用`n`代表负值，例如：`.ml-n3` = `margin-left:-1rem;`
 
+?> **水平居中：** 此外，Bootstrap还包括一个`.mx-auto`类，用于通过将水平边距设置为auto来使居中固定宽度的块级内容(display:block) 水平居中。
+
+```demo
+<span class="d-block mx-auto" style="width: 200px;">
+  Centered element
+</span>
+```
+
+```html
+<span class="d-block mx-auto" style="width: 200px;">
+  Centered element
+</span>
+```
+
 ## Text
 
 `text-align:{left,center,right}`文本对齐方式我们提供了相应的实用工具，并且支持媒体响应。

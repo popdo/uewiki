@@ -11,7 +11,7 @@
 - `<body>`还设置了全局`font-family`, `font-weight`, `line-height`和`color`。某些表单元素会继承这一特性，以防止字体不一致。
 - 为了安全起见，`<body>`有一个声明的背景色，默认为#fff。
 
-### 常用标签
+### 常用文本标签
 
 |标签|类名支持|说明|示例|
 |---|-------|---|----|
@@ -224,3 +224,72 @@
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
 ```
+
+## 图片
+
+将图像设置为响应式（这样它们永远不会变得比其父元素大），并为它们添加轻量级样式 -- 所有这些都通过类来实现的。
+
+### 响应式图片
+在Bootstrap中的图片是用`.img-fluid`来做响应的，它应用`max-width: 100%;`和`height: auto;`到图片上，使它与父元素一起伸缩。
+
+```demo
+<svg class="img-fluid"width="100%" style="text-anchor: middle;" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Responsive image</text></svg>
+```
+
+```html
+<img src="..." class="img-fluid" alt="...">
+```
+
+### 图片缩略图
+
+除了我们的`.border-radius`实用工具之外，您还可以使用`.img-thumbnail`使图像具有`1px`的圆角边框外观。
+
+```demo
+<svg class="img-thumbnail" style="text-anchor: middle;" width="200" height="200" xmlns="http://www.w3.org/2000/svg" aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text></svg>
+```
+
+```html
+<img src="..." class="img-thumbnail" alt="...">
+```
+
+### 图片对齐
+
+左右浮动对齐。
+
+```demo
+<svg class="rounded float-left" style="text-anchor: middle;" width="200" height="200" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 200x200" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text></svg>
+<svg class="rounded float-right" style="text-anchor: middle;" width="200" height="200" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 200x200" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text></svg>
+<div class="clearfix"></div>
+```
+
+```html
+<img src="..." class="rounded float-left" alt="...">
+<img src="..." class="rounded float-right" alt="...">
+```
+
+图片水平对齐有两种常用方法。第一种方法是使用我们的[间距辅助工具](/bootstrap5/utilities?id=spacing)中的`.mx-auto`。
+
+```demo
+<svg class="rounded mx-auto d-block" style="text-anchor: middle;"  width="200" height="200" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 200x200" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text></svg>
+```
+
+```html
+<img src="..." class="rounded mx-auto d-block" alt="...">
+```
+方法二：
+
+```demo
+<div class="text-center">
+  <svg class="rounded" width="200" style="text-anchor: middle;"  height="200" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 200x200" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text></svg>
+</div>
+```
+
+```html
+<div class="text-center">
+  <img src="..." class="rounded" alt="...">
+</div>
+```
+
+
+
+
