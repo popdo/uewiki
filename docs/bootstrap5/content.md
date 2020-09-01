@@ -224,4 +224,3 @@
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
 ```
-
