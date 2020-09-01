@@ -473,7 +473,7 @@ $breadcrumb-divider: none;
 [查看nav中示例](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/#example-in-navbar)  
 [查看list-group中示例](https://v5.getbootstrap.com/docs/5.0/components/scrollspy/#example-with-list-group)
 
-### 通过data属性使用
+### 通过data属性使用 <!-- {docsify-ignore} -->
 
 要方便地将滚动监听(scrollspy)行为添加到顶栏导航中，请将`data-spy="scroll"`添加到要监视的元素（最典型的是`<body>`）。然后将`nav`组件的父元素的ID或类添加`data-target`属性。
 
@@ -495,7 +495,7 @@ body {
 </body>
 ```
 
-### 通过JavaScript使用
+### 通过JavaScript使用 <!-- {docsify-ignore} -->
 
 在CSS中添加`position:relative`之后，通过JavaScript调用滚动监听(scrollspy)：
 
@@ -507,7 +507,7 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 
 !> 不可见的目标元素将被忽略，它们对应的导航项永远不会被突出显示。
 
-### methods方法
+### methods方法 <!-- {docsify-ignore} -->
 
 #### 刷新
 

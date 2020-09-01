@@ -1,6 +1,6 @@
 # 内容
 
-## 全局设置
+## 全局设置说明
 
 为了在媒体响应上具有更好的体验bootstrap使用rem作为尺寸单位。为了更容易地跨设备大小缩放，块元素应该使用rem作为边距。尽可能使用inherit，尽量减少字体相关属性不必要的声明。
 
@@ -10,30 +10,6 @@
 - `<html>`上没有声明基本字体大小，但假定为16px（浏览器默认值）。字体大小：1rem应用于`<body>`上，以便通过媒体查询轻松响应类型缩放，同时尊重用户偏好并确保更易访问的方法。可以通过修改`$font-size`根变量来覆盖此浏览器默认值。
 - `<body>`还设置了全局`font-family`, `font-weight`, `line-height`和`color`。某些表单元素会继承这一特性，以防止字体不一致。
 - 为了安全起见，`<body>`有一个声明的背景色，默认为#fff。
-
-### 常用文本标签
-
-|标签|类名支持|说明|示例|
-|---|-------|---|----|
-|`<code>`||内联代码|`.cc{color:#ccc}`|
-|`<pre>`<br>`<code>...</code>`<br>`</pre>`||代码块|<pre><code>$text="hello";<br>echo $text</code></pre>|
-|`<var>`||变量|<var>var</var>|
-|`<kbd>`||键盘符|<kbd>Shift</kbd>|
-|`<samp>`||是一个短语标签，用来定义计算机程序的样本文本|<samp>样本文本</samp>|
-|`<address>`||地址|<address><a href="mailto:first.last@example.com">first.last@example.com</a></address>|
-|`<abbr>`||标记一个简称、缩写|Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.|
-|`<blockquote>`|.blockquote|引用文档中其他来源的内容块，更详细查看[官方文档](https://v5.getbootstrap.com/docs/5.0/content/typography/#blockquotes)|<blockquote>小鸟飞的很高，很远...</blockquote>|
-|`<mark>`||表示标记或突出显示以供参考或表示的文本。|<mark>highlight</mark>|
-|`<small>`||代表旁注和小字体，如版权和法律文本。||
-|`<del>`||删除线：表示不再相关或不再准确的元素。|<del>开发一个blog系统</del>|
-|`<u>`||下划线：在非链接元素上少用，容易与链接混淆。|<u>Hello!</u>|
-|`<strong>`||加粗：表示强调。强调性高于em||
-|`<b>`||加粗：单纯的加粗||
-|`<em>`||斜体：含语意-一般的强调文本||
-|`<i>`||斜体：无语意||
-|`<br>`||是HTML写法||
-|`<br/>`||是XHTML1.1的写法，也是XML写法。||
-|`<br />`||是XHTML为兼容HTML的写法，也是XML写法||
 
 ## 版式设计
 
@@ -181,6 +157,7 @@
 ### 突出段落
 
 通过加上"`.lead`"使段落突出。
+
 ```demo
 <p>
   Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
@@ -199,37 +176,36 @@
 </p>
 ```
 
-### 内嵌文本元素
+### 内联文本标签
 
-为常见的内联HTML5元素设计样式。
-
-```demo
-<p>mark:You can use the mark tag to <mark>highlight</mark> text.</p>
-<p>del:<del>This line of text is meant to be treated as deleted text.</del></p>
-<p>s:<s>This line of text is meant to be treated as no longer accurate.</s></p>
-<p>ins:<ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-<p>u:<u>This line of text will render as underlined</u></p>
-<p>small:<small>This line of text is meant to be treated as fine print.</small></p>
-<p>strong:<strong>This line rendered as bold text.</strong></p>
-<p>em:<em>This line rendered as italicized text.</em></p>
-```
-
-```html
-<p>You can use the mark tag to <mark>highlight</mark> text.</p>
-<p><del>This line of text is meant to be treated as deleted text.</del></p>
-<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-<p><u>This line of text will render as underlined</u></p>
-<p><small>This line of text is meant to be treated as fine print.</small></p>
-<p><strong>This line rendered as bold text.</strong></p>
-<p><em>This line rendered as italicized text.</em></p>
-```
+|标签|类名支持|说明|示例|
+|---|-------|---|----|
+|`<code>`||内联代码|`.cc{color:#ccc}`|
+|`<pre>`<br>`<code>...</code>`<br>`</pre>`||代码块|<pre><code>$text="hello";<br>echo $text</code></pre>|
+|`<var>`||变量|<var>var</var>|
+|`<kbd>`||键盘符|<kbd>Shift</kbd>|
+|`<samp>`||是一个短语标签，用来定义计算机程序的样本文本|<samp>样本文本</samp>|
+|`<address>`||地址|<address><a href="mailto:first.last@example.com">first.last@example.com</a></address>|
+|`<abbr>`||标记一个简称、缩写|Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.|
+|`<blockquote>`|.blockquote|引用文档中其他来源的内容块，更详细查看[官方文档](https://v5.getbootstrap.com/docs/5.0/content/typography/#blockquotes)|<blockquote>小鸟飞的很高，很远...</blockquote>|
+|`<mark>`||表示标记或突出显示以供参考或表示的文本。|<mark>highlight</mark>|
+|`<small>`||代表旁注和小字体，如版权和法律文本。||
+|`<del>`||删除线：表示不再相关或不再准确的元素。|<del>开发一个blog系统</del>|
+|`<u>`||下划线：在非链接元素上少用，容易与链接混淆。|<u>Hello!</u>|
+|`<strong>`||加粗：表示强调。强调性高于em||
+|`<b>`||加粗：单纯的加粗||
+|`<em>`||斜体：含语意-一般的强调文本||
+|`<i>`||斜体：无语意||
+|`<br>`||是HTML写法||
+|`<br/>`||是XHTML1.1的写法，也是XML写法。||
+|`<br />`||是XHTML为兼容HTML的写法，也是XML写法||
 
 ## 图片
 
 将图像设置为响应式（这样它们永远不会变得比其父元素大），并为它们添加轻量级样式 -- 所有这些都通过类来实现的。
 
 ### 响应式图片
+
 在Bootstrap中的图片是用`.img-fluid`来做响应的，它应用`max-width: 100%;`和`height: auto;`到图片上，使它与父元素一起伸缩。
 
 ```demo
@@ -276,6 +252,7 @@
 ```html
 <img src="..." class="rounded mx-auto d-block" alt="...">
 ```
+
 方法二：
 
 ```demo
@@ -290,6 +267,23 @@
 </div>
 ```
 
+### 文档图片
 
+`<figure>`标签用作文档中插图的图片。当你需要显示内容（例如带有可选标题的图片）时，可以考虑使用。它是HTML 5 中的新标签。
 
+- 请使用包含`.fig`、`.fig-img`和`.fig-caption`的元素为HTML5`<figure>`和`<figcaption>`元素提供一些基本样式。
+- 如果`<figure>`中的图片没有明确的大小，请确保在你的`<img>`中添加`.img-fluid`类，使其变为响应式的。
 
+```demo
+<figure class="figure">
+  <svg class="figure-img img-fluid rounded" style="text-anchor: middle;" width="400" height="300" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 400x300" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text></svg>
+  <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+</figure>
+```
+
+```html
+<figure class="figure">
+  <img src="..." class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+</figure>
+```

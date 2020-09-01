@@ -14,7 +14,6 @@
 <button type="button" class="btn btn-link">Link</button>
 ```
 
-
 ```html
 <button type="button" class="btn btn-primary">Primary</button>
 <button type="button" class="btn btn-secondary">Secondary</button>
@@ -112,6 +111,7 @@
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
 ```
+
 !> **连接功能警告:** `.disabled`类使用`pointer-events: none`尝试禁用`<a>`的链接功能，但该CSS属性尚未标准化。另外，即使在支持pointer-events: none的浏览器中，keyboard事件也不受影响，这意味着有键盘用户和辅助技术用户仍将能够激活这些链接。为安全起见，请在这些链接上添加`tabindex="-1"`属性（以防止它们获得键盘焦点），并使用自定义JavaScript禁用其功能。
 
 ## 切换状态
@@ -141,6 +141,7 @@
 ## 圆角按钮
 
 待完善~
+
 ```html
 <button class="btn oo is-white" type="button">white</button>
 <button class="btn oo is-light" type="button">light</button>
@@ -179,9 +180,12 @@
 
 ## 按钮组
 
-### 基础按钮组
-
 将需要编组的按钮包裹到`.btn-group`之中，为了支持其它的辅助技术，我们还需要添加`role="group"` `aria-label="xxx"`属性
+
+<!-- tabs:start -->
+
+### **基础按钮组**
+
 ```demo
 <div class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary">Left</button>
@@ -223,9 +227,10 @@
 </div>
 ```
 
-### Checkbox和radio按钮组
+### **Checkbox、radio按钮组**
 
 将类似按钮的复选框和单选切换按钮组合成一个无缝的按钮组。
+
 ```demo
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
   <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
@@ -275,7 +280,7 @@
 </div>
 ```
 
-### 按钮组尺寸
+### **按钮组尺寸**
 
 若想获得更大的按钮组追加类名`.btn-group-lg`反之想获取更小的按钮组追加类名`.btn-group-sm`即可。
 
@@ -320,7 +325,7 @@
 </div>
 ```
 
-### 嵌套按钮组
+### **嵌套按钮组**
 
 为了实现更复杂的效果，我们还可以把一个`.btn-group`嵌套到另外一个`.btn-group`中。  
 > 该例Dropdown效果需要引入bootstrap的js文件才能正常展示。
@@ -358,3 +363,4 @@
   </div>
 </div>
 ```
+<!-- tabs:end -->

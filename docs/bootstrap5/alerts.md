@@ -85,6 +85,7 @@ Alerts还可以包含额外的HTML元素，如标题、段落和分隔符。
 ## 关闭功能
 
 使用alert JavaScript插件，可以关闭任何内联alert。方法如下：
+
 - 确保您已经加载了alert插件或编译的Bootstrap5 JavaScript文件。
 - 添加[close](/bootstrap5/components?id=关闭按钮)按钮和`.alert-dismissible`类，这将在alert的右侧添加一个关闭按钮。
 - 在close按钮上，添加`data-dismiss="alert"`属性，它触发JavaScript功能。按钮一定要使用`<button>`元素，以便在所有设备上都能正常工作。
@@ -110,7 +111,7 @@ Alerts还可以包含额外的HTML元素，如标题、段落和分隔符。
 
 ## JavaScript事件
 
-### 触发器
+### 触发器 <!-- {docsify-ignore} -->
 
 通过JavaScript关闭警报的功能：
 
@@ -140,7 +141,7 @@ alertList.forEach(function (alert) {
 
 > 请注意，关闭alert会将其从DOM中删除。
 
-### 方法
+### 方法 <!-- {docsify-ignore} -->
 
 例如，你可以使用alert构造函数创建一个alert实例。
 
@@ -163,14 +164,13 @@ var bsAlert = new bootstrap.Alert(myAlert)
 |dispose|销毁元素的警报|
 |getInstance|静态方法，它允许您获取与DOM元素关联的警报实例，您可以这样使用它：`bootstrap.Alert.getInstance(alert)`|
 
-
 ```js
 var alertNode = document.querySelector('.alert')
 var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
 ```
 
-### 事件
+### 事件 <!-- {docsify-ignore} -->
 
 Bootstrap的alert插件公开了一些事件，用于挂接警报功能。
 
@@ -178,6 +178,3 @@ Bootstrap的alert插件公开了一些事件，用于挂接警报功能。
 |------|-----------|
 |close.bs.alert|调用`close`实例方法时立即触发。|
 |closed.bs.alert|当警报已关闭且CSS转换完成时触发。|
-
-
-

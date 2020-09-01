@@ -502,8 +502,72 @@
 
 <!-- tabs:end -->
 
+## 垂直对齐
+
+```demo
+<div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th scope="col" class="w-25">Heading 1</th>
+          <th scope="col" class="w-25">Heading 2</th>
+          <th scope="col" class="w-25">Heading 3</th>
+          <th scope="col" class="w-25">Heading 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>此单元格继承了table的<code>.align-middle</code></td>
+          <td>此单元格继承了table的<code>.align-middle</code></td>
+          <td>此单元格继承了table的<code>.align-middle</code></td>
+          <td>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</td>
+        </tr>
+        <tr class="align-bottom">
+          <td>此单元格继承了tr的<code>.align-bottom</code></td>
+          <td>此单元格继承了tr的<code>.align-bottom</code></td>
+          <td>此单元格继承了tr的<code>.align-bottom</code></td>
+          <td>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</td>
+        </tr>
+        <tr>
+          <td>此单元格继承了table的<code>.align-middle</code></td>
+          <td>此单元格继承了table的<code>.align-middle</code></td>
+          <td class="align-top">此单元格单独<code>.align-top</code></td>
+          <td>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+```
+
+```html
+<div class="table-responsive">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+        ...
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        ...
+      </tr>
+      <tr class="align-bottom">
+        ...
+      </tr>
+      <tr>
+        <td>...</td>
+        <td>...</td>
+        <td class="align-top">This cell is aligned to the top.</td>
+        <td>...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
 
 ## 表格上色
+
+多色表格的样式类是`.table-{color}`,它可以单独放置在表格中的任意`table`、`thead`、`tbody`、`tr`、`td`等元素上面。
 
 ```demo
 <table class="table d-table">
@@ -600,5 +664,130 @@
 
 ```
 
-## 垂直对齐
+## 响应式表格
 
+响应式表格可以轻松的水平滚动表格,尤其是在可视尺寸有限的手机屏幕上，响应式表格可以通过触摸划动屏幕以完整的显示表格所有内容。
+
+- 通过将`.table`放置于一个类名称为`.table-responsive`的容器中即可。
+- 也可以给响应表格的父容器选择一个最大断点`.table-responsible-{sm|md|lg|xl|-xxl}`。
+
+可以在小尺寸的屏幕上滑动该表格试试：
+
+```demo
+<div class="table-responsive">
+    <table class="table d-table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+```
+
+```html
+<div class="table-responsive">
+  <table class="table">
+    ...
+  </table>
+</div>
+```
+
+## 在sass中自定义表格
+
+- The factor variables (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`) are used to determine the contrast in table variants.
+- Apart from the light & dark table variants, theme colors are lightened by the `$table-bg-level` variable.
+
+```scss
+$table-cell-padding-y:        .5rem;
+$table-cell-padding-x:        .5rem;
+$table-cell-padding-y-sm:     .25rem;
+$table-cell-padding-x-sm:     .25rem;
+
+$table-cell-vertical-align:   top;
+
+$table-color:                 $body-color;
+$table-bg:                    transparent;
+
+$table-striped-color:         $table-color;
+$table-striped-bg-factor:     .05;
+$table-striped-bg:            rgba($black, $table-striped-bg-factor);
+
+$table-active-color:          $table-color;
+$table-active-bg-factor:      .1;
+$table-active-bg:             rgba($black, $table-active-bg-factor);
+
+$table-hover-color:           $table-color;
+$table-hover-bg-factor:       .075;
+$table-hover-bg:              rgba($black, $table-hover-bg-factor);
+
+$table-border-factor:         .1;
+$table-border-width:          $border-width;
+$table-border-color:          $border-color;
+
+$table-striped-order:         odd;
+
+$table-group-seperator-color: currentColor;
+
+$table-caption-color:         $text-muted;
+
+$table-bg-level:              -9;
+
+$table-variants: (
+  "primary":    color-level($primary, $table-bg-level),
+  "secondary":  color-level($secondary, $table-bg-level),
+  "success":    color-level($success, $table-bg-level),
+  "info":       color-level($info, $table-bg-level),
+  "warning":    color-level($warning, $table-bg-level),
+  "danger":     color-level($danger, $table-bg-level),
+  "light":      $light,
+  "dark":       $dark,
+);
+```

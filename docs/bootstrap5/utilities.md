@@ -36,6 +36,7 @@ $utilities: (
   )
  );
 ```
+
 生成的css是这样的：
 
 ```css
@@ -63,6 +64,7 @@ $utilities: (
   )
  );
 ```
+
 最后生成的css是：
 
 ```css
@@ -90,6 +92,7 @@ $utilities: (
   )
  );
 ```
+
 这样就生成每个媒体尺寸的响应式工具类：
 
 ```css
@@ -157,6 +160,7 @@ $utilities: (
   )
  );
 ```
+
 输出结果类：
 
 ```css
@@ -250,6 +254,7 @@ $utilities: (
 ## Radius
 
 设置圆角：  
+
 ```demo
 <span class="rounded p-4 bg-secondary d-inline-block mr-2 text-white">全圆角</span>
 <span class="rounded-top p-4 bg-secondary d-inline-block mr-2 text-white">上圆角</span>
@@ -288,7 +293,7 @@ $utilities: (
 
 ## Colors
 
-### 链接颜色
+### 情境文本颜色
 
 使用颜色工具为文本着色。如果您想给链接`<a>`着色，可以使用[.link-*helper](/bootstrap5/helpers?id=colored_links)类，这些类具有`:hover`和`:focus`状态。
 
@@ -307,6 +312,7 @@ $utilities: (
 <span class="text-black-50 mr-2">.text-black-50</span>
 <span class="text-white-50 bg-dark">.text-white-50</span>
 ```
+
 ```html
 <span class="text-primary">.text-primary</span>
 <span class="text-secondary">.text-secondary</span>
@@ -401,26 +407,27 @@ bootstrap支持所有display属性的类写法，具体如下：
 
 ### 响应式隐藏
 
-为了更快更友好的进行移动开发，使用响应式显示类，按设备来显示和隐藏元素。  
+为了更快更友好的进行移动开发，使用响应式显示类，按设备来显示和隐藏元素。
+
 - 要隐藏元素，只需使用`.d-none`类或`.d-{sm,md,lg,xl,xxl}-none`类中的一个，即可实现任何响应式屏幕变化。  
 - 要在给定的屏幕尺寸区间上显示一个元素，就可以用如下表格的方式进行区间设置。
 
 |屏幕大小|类名称|
 |--|--|
-|隐藏所有|	`.d-none`|
-|仅在xs上隐藏|	`.d-none` `.d-sm-block`|
-|仅在sm上隐藏|	`.d-sm-none` `.d-md-block`|
-|仅在md上隐藏|	`.d-md-none` `.d-lg-block`|
-|仅在lg隐藏	|`.d-lg-none` `.d-xl-block`|
-|仅在xl隐藏|	`.d-xl-none`|
-|仅在xxl隐藏|	`.d-xxl-none`|
-|显示所有|	`.d-block`|
-|仅在xs上可见|	`.d-block` `.d-sm-none`|
-|仅在sm上可见|	`.d-none` `.d-sm-block` `.d-md-none`|
-|仅在md上可见|	`.d-none` `.d-md-block` `.d-lg-none`|
-|仅在lg上可见|	`.d-none` `.d-lg-block` `.d-xl-none`|
-|仅在xl上可见|	`.d-none` `.d-xl-block` `.d-xxl-none`|
-|仅在xxl上可见|	`.d-none` `.d-xxl-block`|
+|隐藏所有|`.d-none`|
+|仅在xs上隐藏|`.d-none` `.d-sm-block`|
+|仅在sm上隐藏|`.d-sm-none` `.d-md-block`|
+|仅在md上隐藏|`.d-md-none` `.d-lg-block`|
+|仅在lg隐藏|`.d-lg-none` `.d-xl-block`|
+|仅在xl隐藏|`.d-xl-none`|
+|仅在xxl隐藏|`.d-xxl-none`|
+|显示所有|`.d-block`|
+|仅在xs上可见|`.d-block` `.d-sm-none`|
+|仅在sm上可见|`.d-none` `.d-sm-block` `.d-md-none`|
+|仅在md上可见|`.d-none` `.d-md-block` `.d-lg-none`|
+|仅在lg上可见|`.d-none` `.d-lg-block` `.d-xl-none`|
+|仅在xl上可见|`.d-none` `.d-xl-block` `.d-xxl-none`|
+|仅在xxl上可见|`.d-none` `.d-xxl-block`|
 
 ```demo
 <div class="d-lg-none">隐藏在lg和更宽的屏幕上</div>
@@ -644,7 +651,6 @@ Bootstrap提供了 `pe-none` 和 `pe-auto`类来防止或添加元素交互。
 
 通过`间距工具`可以在任意元素上轻松设置彼此之间的`x`、`y`轴的间距
 
-
 |类前缀|说明|
 |--|--|
 |m|margin-|
@@ -739,7 +745,6 @@ Bootstrap提供了 `pe-none` 和 `pe-auto`类来防止或添加元素交互。
 
 ### 字体粗细和斜体
 
-
 ```demo
 <p class="font-weight-bold">超粗体：Bold text.</p>
 <p class="font-weight-bolder">粗体：Bolder weight text (relative to the parent element).</p>
@@ -820,7 +825,7 @@ Bootstrap提供了 `pe-none` 和 `pe-auto`类来防止或添加元素交互。
 
 ## 垂直对齐
 
-使用`垂直对齐`工具`.align-* `改变元素的`vertical-alignment`对齐方式。请注意，垂直对齐只影响`inline`、`inline-block`、`inline-table`和`table`单元格元素。
+使用`垂直对齐`工具`.align-*`改变元素的`vertical-alignment`对齐方式。请注意，垂直对齐只影响`inline`、`inline-block`、`inline-table`和`table`单元格元素。
 
 对于内联元素：
 
@@ -893,4 +898,3 @@ Visibility可见性的显示与隐藏的类名：
   visibility: hidden !important;
 }
 ```
-

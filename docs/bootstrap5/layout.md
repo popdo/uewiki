@@ -1,121 +1,155 @@
-# 消息框
+# 布局
 
-## 消息类型
+## 媒体断点
 
-<div class="msg mb-1 is-primary"><i class="icon icon-msg-info text-primary"></i><strong>primary</strong>world!</div><div class="msg mb-1 is-secondary"><i class="icon icon-msg-info text-secondary"></i><strong>secondary</strong>world!</div><div class="msg mb-1 is-success"><i class="icon icon-msg-success text-success"></i><strong>success</strong>hello,world!</div><div class="msg mb-1 is-info"><i class="icon icon-msg-notice text-info"></i><strong>info</strong>一条带有关闭按钮的提示消息！<button type="button"class="close"aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="msg mb-1 is-warning"><i class="icon icon-msg-warning text-warning"></i><strong>warning</strong>hello,world!</div><div class="msg mb-1 is-danger"><i class="icon icon-msg-danger text-danger"></i><strong>danger</strong>hello,world!</div>
+每个断点大小被设置为12的倍数，并代表通用设备大小和窗口尺寸的子集。它们没有专门针对每个设备，但是近乎为任意尺寸的设备提供了强大的一致性的基础。
 
-```html
-<div class="msg mb-1 is-primary">
-    <i class="icon icon-msg-info text-primary"></i>
-    <strong>primary</strong> world!
-</div>
-<div class="msg mb-1 is-secondary">
-    <i class="icon icon-msg-info text-secondary"></i>
-    <strong>secondary</strong> world!
-</div>
-<div class="msg mb-1 is-success">
-    <i class="icon icon-msg-success text-success"></i>
-    <strong>success</strong> hello,world!
-</div>
-<div class="msg mb-1 is-info">
-    <i class="icon icon-msg-notice text-info"></i>
-    <strong>info</strong>
-    一条带有关闭按钮的提示消息！
-    <button type="button" class="close" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-<div class="msg mb-1 is-warning">
-    <i class="icon icon-msg-warning text-warning"></i>
-    <strong>warning</strong> hello,world!
-</div>
-<div class="msg mb-1 is-danger">
-    <i class="icon icon-msg-danger text-danger"></i>
-    <strong>danger</strong> hello,world!
-</div>
+这些断点可以通过Sass源码进行定制，您可以在我们的sass源码`_variables.scss`中找到他们。
+
+| Breakpoint        | Class infix | Dimensions |
+|-------------------|-------------|------------|
+| X\-Small          | None        | 0–576px    |
+| Small             | `sm`          | ≥576px     |
+| Medium            | `md`          | ≥768px     |
+| Large             | `lg`          | ≥992px     |
+| Extra large       | `xl`          | ≥1200px    |
+| Extra extra large | `xxl`         | ≥1400px    |
+
+```scss
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 ```
 
-## 浅色背景
+<!-- tabs:start -->
 
-<div class="msg sbg-primary mb-1"><i class="icon icon-msg-info text-primary"></i><strong>primary</strong>world!</div><div class="msg mb-1 sbg-secondary"><i class="icon icon-msg-info text-secondary"></i><strong>secondary</strong>world!</div><div class="msg mb-1 sbg-success"><i class="icon icon-msg-success text-success"></i><strong>success</strong>hello,world!</div><div class="msg mb-1 sbg-info hover-shadow"><i class="icon icon-msg-notice text-info"></i><strong>info</strong>一条带有关闭按钮的提示消息！<button type="button"class="close"aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="msg mb-1 sbg-warning"><i class="icon icon-msg-warning text-warning"></i><strong>warning</strong>hello,world!</div><div class="msg mb-2 sbg-danger"><i class="icon icon-msg-danger text-danger"></i><strong>danger</strong>hello,world!</div>
+### **Min-width**
 
-通过添加`.sbg-color`实现浅色背景
+Bootstrap在Sass源代码中为布局、网格系统和组件使用以下媒体查询范围的断点。
 
-```html
-<div class="msg sbg-primary">
-    <i class="icon icon-msg-info text-primary"></i>
-    <strong>primary</strong> world!
-</div>
+```scss
+// Source mixins
+
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
+
+// Usage
+
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  .custom-class {
+    display: block;
+  }
+}
 ```
 
-## Alert弹层
+这些Sass mixin编译之后的css示例：
 
-<div class="alert is-primary bo"><div class="alert-hd"><i class="icon icon-click-s text-primary"></i><h5 class="title">温馨提示</h5></div><div class="alert-bd">关于暂停用户发布功能，并全面清查平台内容</div><div class="alert-ft flex-xy-c"><button class="btn is-success">确定</button><button class="btn is-light">取消</button></div></div>
+```scss
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
 
-```html
-<div class="alert is-primary bo">
-    <div class="alert-hd">
-        <i class="icon icon-click-s text-primary"></i>
-        <h5 class="title">温馨提示</h5> 
-    </div>
-    <div class="alert-bd">
-        关于暂停用户发布功能，并全面清查平台内容
-    </div>
-    <div class="alert-ft flex-xy-c">
-        <button class="btn is-success">确定</button>
-        <button class="btn is-light">取消</button>
-    </div>
-</div>
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
 ```
 
-<div class="alert is-success bo"><div class="alert-hd"><i class="icon icon-msg-checkb text-success"></i><h5 class="title">发布成功</h5></div><div class="alert-bd">恭喜你！操作成功了……</div><div class="alert-ft flex-xy-c"><button class="btn is-success">知道了</button></div></div>
+### **Max-width**
 
-```html
-<div class="alert is-success bo">
-    <div class="alert-hd">
-        <i class="icon icon-msg-checkb text-success"></i>
-        <h5 class="title">发布成功</h5> 
-    </div>
-    <div class="alert-bd">
-        恭喜你！操作成功了……
-    </div>
-    <div class="alert-ft flex-xy-c">
-        <button class="btn is-success">知道了</button>
-    </div>
-</div>
+我们偶尔会使用相反方向的媒体查询（给定屏幕大小或更小）：
+
+```scss
+// No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
+@include media-breakpoint-down(sm) { ... }
+@include media-breakpoint-down(md) { ... }
+@include media-breakpoint-down(lg) { ... }
+@include media-breakpoint-down(xl) { ... }
+@include media-breakpoint-down(xxl) { ... }
+
+// Example: Style from medium breakpoint and down
+@include media-breakpoint-down(md) {
+  .custom-class {
+    display: block;
+  }
+}
 ```
 
-<div class="alert is-danger bo"><div class="alert-hd text-danger"><i class="icon icon-msg-danger"></i><h5 class="title">出错了</h5></div><div class="alert-bd">很抱歉，您未能设置成功……</div><div class="alert-ft flex-xy-c"><button class="btn is-success">确定</button><button class="btn is-light">取消</button></div></div>
+这些mixin获取那些声明的断点，从中减去.02px，并将它们用作我们的最大宽度值。例如：
 
-```html
-<div class="alert is-danger bo">
-    <div class="alert-hd text-danger">
-        <i class="icon icon-msg-danger"></i>
-        <h5 class="title">出错了</h5> 
-    </div>
-    <div class="alert-bd">
-        很抱歉，您未能设置成功……
-    </div>
-    <div class="alert-ft flex-xy-c">
-        <button class="btn is-success">确定</button>
-        <button class="btn is-light">取消</button>
-    </div>
-</div>
-```
-<div class="alert is-warning bo"><div class="alert-hd"><i class="icon icon-msg-question text-warning"></i><h5 class="title">确认信息</h5></div><div class="alert-bd">你确定要删除该用户吗?</div><div class="alert-ft flex-xy-c"><button class="btn is-success">确定</button><button class="btn is-light">取消</button></div></div>
+```scss
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
 
-```html
-<div class="alert is-warning bo">
-    <div class="alert-hd">
-        <i class="icon icon-msg-question text-warning"></i>
-        <h5 class="title">确认信息</h5> 
-    </div>
-    <div class="alert-bd">
-        你确定要删除该用户吗?
-    </div>
-    <div class="alert-ft flex-xy-c">
-        <button class="btn is-success">确定</button>
-        <button class="btn is-light">取消</button>
-    </div>
-</div>
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
 ```
+
+### **单个断点**
+
+还有媒体查询和mixin，可以使用最小和最大断点宽度来定位屏幕大小的单个片段。
+
+```scss
+@include media-breakpoint-only(xs) { ... }
+@include media-breakpoint-only(sm) { ... }
+@include media-breakpoint-only(md) { ... }
+@include media-breakpoint-only(lg) { ... }
+@include media-breakpoint-only(xl) { ... }
+@include media-breakpoint-only(xxl) { ... }
+```
+
+例如`@include media-breakpoint-only(md) { ... }`输出的结果是：
+
+```css
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+```
+
+### **断点跨度**
+
+同样，媒体查询可能跨越多个断点宽度：
+
+```scss
+@include media-breakpoint-between(md, xl) { ... }
+```
+
+输出结果是：
+
+```css
+@media (min-width: 768px) and (max-width: 1199.98px) { ... }
+```
+
+<!-- tabs:end -->
