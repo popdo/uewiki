@@ -28,7 +28,7 @@ $grid-breakpoints: (
 
 <!-- tabs:start -->
 
-### **Min-width**
+#### **Min-width**
 
 Bootstrap在Sass源代码中为布局、网格系统和组件使用以下媒体查询范围的断点。
 
@@ -77,7 +77,7 @@ Bootstrap在Sass源代码中为布局、网格系统和组件使用以下媒体�
 @media (min-width: 1400px) { ... }
 ```
 
-### **Max-width**
+#### **Max-width**
 
 我们偶尔会使用相反方向的媒体查询（给定屏幕大小或更小）：
 
@@ -119,7 +119,7 @@ Bootstrap在Sass源代码中为布局、网格系统和组件使用以下媒体�
 // No media query since the xxl breakpoint has no upper bound on its width
 ```
 
-### **单个断点**
+#### **单个断点**
 
 还有媒体查询和mixin，可以使用最小和最大断点宽度来定位屏幕大小的单个片段。
 
@@ -138,7 +138,7 @@ Bootstrap在Sass源代码中为布局、网格系统和组件使用以下媒体�
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 ```
 
-### **断点跨度**
+#### **断点跨度**
 
 同样，媒体查询可能跨越多个断点宽度：
 
@@ -210,7 +210,6 @@ $container-max-widths: (
 .custom-container {
   @include make-container();
 }
-
 ```
 
 ## Grid-栅格系统
@@ -244,21 +243,21 @@ $container-max-widths: (
 ```demo
 <div class="container">
   <div class="row mb-2">
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       1 of 2
     </div>
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       2 of 2
     </div>
   </div>
   <div class="row">
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       1 of 3
     </div>
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       2 of 3
     </div>
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       3 of 3
     </div>
   </div>
@@ -298,24 +297,24 @@ flexbox网格列的自动布局也意味着你可以设置一列的宽度，并�
 ```demo
 <div class="container">
   <div class="row mb-2">
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       1 of 3
     </div>
-    <div class="col-6 border bg-light p-3">
+    <div class="col-6 border bg-light p-2">
       2 of 3 (wider)
     </div>
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       3 of 3
     </div>
   </div>
   <div class="row">
-    <div class="col-5 border bg-light p-3">
+    <div class="col-5 border bg-light p-2">
       1 of 3
     </div>
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       2 of 3 (wider)
     </div>
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       3 of 3
     </div>
   </div>
@@ -356,24 +355,24 @@ flexbox网格列的自动布局也意味着你可以设置一列的宽度，并�
 ```demo
 <div class="container">
   <div class="row justify-content-md-center mb-2">
-    <div class="col col-lg-2 border bg-light p-3">
+    <div class="col col-lg-2 border bg-light p-2">
       1 of 3
     </div>
-    <div class="col-md-auto border bg-light p-3">
+    <div class="col-md-auto border bg-light p-2">
       Variable width content
     </div>
-    <div class="col col-lg-2 border bg-light p-3">
+    <div class="col col-lg-2 border bg-light p-2">
       3 of 3
     </div>
   </div>
   <div class="row">
-    <div class="col border bg-light p-3">
+    <div class="col border bg-light p-2">
       1 of 3
     </div>
-    <div class="col-md-auto border bg-light p-3">
+    <div class="col-md-auto border bg-light p-2">
       Variable width content.aaaaaaaabbbbbbbbbbbbbbb
     </div>
-    <div class="col col-lg-2 border bg-light p-3">
+    <div class="col col-lg-2 border bg-light p-2">
       3 of 3
     </div>
   </div>
@@ -422,14 +421,14 @@ Bootstrap的网格包括六层预定义类，用于构建复杂的响应式布�
 ```demo
 <div class="container">
   <div class="row mb-2">
-    <div class="col border bg-light p-3">col</div>
-    <div class="col border bg-light p-3">col</div>
-    <div class="col border bg-light p-3">col</div>
-    <div class="col border bg-light p-3">col</div>
+    <div class="col border bg-light p-2">col</div>
+    <div class="col border bg-light p-2">col</div>
+    <div class="col border bg-light p-2">col</div>
+    <div class="col border bg-light p-2">col</div>
   </div>
   <div class="row">
-    <div class="col-8 border bg-light p-3">col-8</div>
-    <div class="col-4 border bg-light p-3">col-4</div>
+    <div class="col-8 border bg-light p-2">col-8</div>
+    <div class="col-4 border bg-light p-2">col-4</div>
   </div>
 </div>
 
@@ -458,13 +457,13 @@ Bootstrap的网格包括六层预定义类，用于构建复杂的响应式布�
 ```demo
 <div class="container">
   <div class="row mb-2">
-    <div class="col-sm-8 border bg-light p-3">col-sm-8</div>
-    <div class="col-sm-4 border bg-light p-3">col-sm-4</div>
+    <div class="col-sm-8 border bg-light p-2">col-sm-8</div>
+    <div class="col-sm-4 border bg-light p-2">col-sm-4</div>
   </div>
   <div class="row">
-    <div class="col-sm border bg-light p-3">col-sm</div>
-    <div class="col-sm border bg-light p-3">col-sm</div>
-    <div class="col-sm border bg-light p-3">col-sm</div>
+    <div class="col-sm border bg-light p-2">col-sm</div>
+    <div class="col-sm border bg-light p-2">col-sm</div>
+    <div class="col-sm border bg-light p-2">col-sm</div>
   </div>
 </div>
 ```
@@ -491,21 +490,21 @@ Bootstrap的网格包括六层预定义类，用于构建复杂的响应式布�
 <div class="container">
   <!-- Stack the columns on mobile by making one full-width and the other half-width -->
   <div class="row mb-2">
-    <div class="col-md-8 border bg-light p-3">.col-md-8</div>
-    <div class="col-6 col-md-4 border bg-light p-3">.col-6 .col-md-4</div>
+    <div class="col-md-8 border bg-light p-2">.col-md-8</div>
+    <div class="col-6 col-md-4 border bg-light p-2">.col-6 .col-md-4</div>
   </div>
 
   <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
   <div class="row mb-2">
-    <div class="col-6 col-md-4 border bg-light p-3">.col-6 .col-md-4</div>
-    <div class="col-6 col-md-4 border bg-light p-3">.col-6 .col-md-4</div>
-    <div class="col-6 col-md-4 border bg-light p-3">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4 border bg-light p-2">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4 border bg-light p-2">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4 border bg-light p-2">.col-6 .col-md-4</div>
   </div>
 
   <!-- Columns are always 50% wide, on mobile and desktop -->
   <div class="row">
-    <div class="col-6 border bg-light p-3">.col-6</div>
-    <div class="col-6 border bg-light p-3">.col-6</div>
+    <div class="col-6 border bg-light p-2">.col-6</div>
+    <div class="col-6 border bg-light p-2">.col-6</div>
   </div>
 </div>
 ```
@@ -535,7 +534,7 @@ Bootstrap的网格包括六层预定义类，用于构建复杂的响应式布�
 
 <!-- tabs:end -->
 
-#### 在row上设置列宽
+### 在row上设置col宽
 
 使用响应的`.row-cols-*`类来快速设置列数，以最好地呈现你的内容和布局。普通的`.col-*`类适用于单独的列（例如`.col-md-4`），而行列类是作为快捷方式在父`.row`上设置的。使用`.row-cols-auto`，你可以给列以自然宽度。  
 使用这些行列类来快速创建基本的网格布局或控制你的布局。
@@ -1361,10 +1360,10 @@ $container-max-widths: (
 .col-*类也可以在.row之外使用，给元素一个特定的宽度。当列类被用作行的非直接子类时，就会省略paddings。
 
 ```demo
-<div class="col-3 bg-light p-3 border">
+<div class="col-3 bg-light p-2 border">
   .col-3: 宽度25%
 </div>
-<div class="col-sm-9 bg-light p-3 border">
+<div class="col-sm-9 bg-light p-2 border">
   .col-sm-9: sm断点上方宽度75%
 </div>
 ```
@@ -1403,3 +1402,272 @@ $container-max-widths: (
   <p>...</p>
 </div>
 ```
+
+## Gutters-槽宽
+
+Gutters是列之间的填充宽度，用于响应式的间隔和对齐Bootstrap网格系统中的内容。
+
+### Gutters是如何工作
+
+- Gutters是列之间的间距，由水平`padding`创建的。我们在每一列设置`padding-righ`t和`padding-left`，并在每一行的开头和结尾使用负margin来抵消，以对齐内容。
+- Gutters开始是`1.5rem`（`20px`）宽。这使我们能够根据padding和margin spacers的比例来匹配我们的网格。
+- Gutters可以响应的缩放宽度。使用断点特定的gutter类来修改水平间距、垂直间距和所有间距。
+
+|类名|响应类|说明|
+|----|-------|-----|
+|`gx-{0~5}`|`gx-{xs\|sm\|md\|lg\|xl\|xxl}-{0~5}`|水平间距|
+|`gy-{0~5}`|`gy-{xs\|sm\|md\|lg\|xl\|xxl}-{0~5}`|垂直间距|
+|`g-{0~5}`|`g-{xs\|sm\|md\|lg\|xl\|xxl}-{0~5}`|水平+垂直间距|
+
+这类类名需设置在`.row`容器上。
+
+### 水平间距
+
+`.gx-*`类可以用来控制水平间隔宽度。如果使用较大的间隔，可能需要调整`.container`或`.container-fluid`父类，以避免溢出，使用匹配的padding工具。  
+例如，在下面的例子2中，我们用`.px-4`增加`padding`。
+
+```demo
+<div class="container bg-light mb-2">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+<div class="container px-4 bg-light mb-2">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+<div class="container overflow-hidden bg-light">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+```
+
+```html
+<div class="container">
+  <div class="row gx-5">
+    <div class="col">Custom column padding</div>
+    <div class="col">Custom column padding</div>
+  </div>
+</div>
+
+<!-- 使用. px-4 -->
+<div class="container px-4">
+  <div class="row gx-5">
+    <div class="col">Custom column padding</div>
+    <div class="col">Custom column padding</div>
+  </div>
+</div>
+
+<!-- 使用overflow-hidden -->
+<div class="container overflow-hidden">
+  <div class="row gx-5">
+    <div class="col">Custom column padding</div>
+    <div class="col">Custom column padding</div>
+  </div>
+</div>
+```
+
+### 垂直间距
+
+`.gy-*`类可以用来控制垂直槽的宽度。像水平间隔一样，垂直间隔可能会在页面末尾的`.row`下面造成一些溢出。如果发生这种情况，你可以使用`.overflow-hidden`类在`.row`外层添加一个包装器。
+
+```demo
+<div class="container overflow-hidden">
+  <div class="row gy-5">
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+```
+
+```html
+<div class="container overflow-hidden">
+  <div class="row gy-5">
+    <div class="col-6">Custom column padding</div>
+    <div class="col-6">Custom column padding</div>
+    <div class="col-6">Custom column padding</div>
+    <div class="col-6">Custom column padding</div>
+  </div>
+</div>
+
+```
+
+### 水平 & 垂直间隔
+
+`.g-*`类可以用来控制水平间隔宽度，在下面的例子中，我们使用较小的间隔宽度，所以不需要添加`.overflow-hidden`包装类。
+
+```demo
+<div class="container">
+  <div class="row g-2">
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+
+```
+
+```html
+<div class="container">
+  <div class="row g-2">
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-2 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+
+```
+
+### 行列间距
+
+还可以在行列中添加间隔类。在下面的例子中，我们使用响应的行列和响应的间隔。
+
+```demo
+<div class="container">
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+  </div>
+</div>
+
+```
+
+```html
+<div class="container">
+  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+    <div class="col">
+      <div class="p-2 border bg-light">Row column</div>
+    </div>
+  </div>
+</div>
+```
+
+### 源码修改间距
+
+是从`$gutters`Sass映射构建的，该映射继承自`$spacers`Sass映射。
+
+```scss
+$grid-gutter-width: 1.5rem;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+```
+
+## z-index
+
+```scss
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-modal-backdrop:             1040;
+$zindex-modal:                      1050;
+$zindex-popover:                    1060;
+$zindex-tooltip:                    1070;
+```
+
+[查看官方文档](https://v5.getbootstrap.com/docs/5.0/layout/z-index/)
