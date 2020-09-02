@@ -7,7 +7,6 @@
 
   - [配置](bootstrap5/setting.md)
   - [布局](bootstrap5/layout.md)
-  - [布局1](bootstrap5/layout1.md)
   - [内容](bootstrap5/content.md)
   - [表单](bootstrap5/form.md)
   - [按钮](bootstrap5/btn.md)
