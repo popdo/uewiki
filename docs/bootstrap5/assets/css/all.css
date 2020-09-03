@@ -5555,11 +5555,11 @@ button.close {
   float: none !important;
 }
 
-.overflow-auto {
+.ov-auto {
   overflow: auto !important;
 }
 
-.overflow-hidden {
+.ov-hidden {
   overflow: hidden !important;
 }
 
@@ -5644,43 +5644,43 @@ button.close {
   position: sticky !important;
 }
 
-.border {
+.bo {
   border: 1px solid #dee2e6 !important;
 }
 
-.border-0 {
+.bo-0 {
   border: 0 !important;
 }
 
-.border-top {
+.bo-t {
   border-top: 1px solid #dee2e6 !important;
 }
 
-.border-top-0 {
+.bo-t-0 {
   border-top: 0 !important;
 }
 
-.border-right {
+.bo-r {
   border-right: 1px solid #dee2e6 !important;
 }
 
-.border-right-0 {
+.bo-r-0 {
   border-right: 0 !important;
 }
 
-.border-bottom {
+.bo-b {
   border-bottom: 1px solid #dee2e6 !important;
 }
 
-.border-bottom-0 {
+.bo-b-0 {
   border-bottom: 0 !important;
 }
 
-.border-left {
+.bo-l {
   border-left: 1px solid #dee2e6 !important;
 }
 
-.border-left-0 {
+.bo-l-0 {
   border-left: 0 !important;
 }
 

@@ -1,0 +1,29 @@
+// map地图 
+/*
+语法：
+$map: (
+    key1: value1,
+    key2: (
+        key-1: value-1,
+        key-2: value-2,
+    ),
+    key3: value3
+);
+*/
+
+// 创建一个map
+$web-bgs: (
+    "facebook":rgb(68, 14, 216),
+    "github":rgb(14, 95, 216),
+    "google":rgb(216, 14, 108),
+    "twtter":rgb(14, 216, 65),
+    "weibo":rgb(216, 162, 14),
+);
+
+// $web:facebook,github,google,twtter,weibo;
+// 使用each遍历map
+@each $key,$value in $web-bgs {
+    .btn-#{$key} {
+        color: $value;
+    }
+}

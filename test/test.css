@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*
+语法：
+$map: (
+    key1: value1,
+    key2: (
+        key-1: value-1,
+        key-2: value-2,
+    ),
+    key3: value3
+);
+*/
+.btn-facebook {
+  color: #440ed8;
+}
+
+.btn-github {
+  color: #0e5fd8;
+}
+
+.btn-google {
+  color: #d80e6c;
+}
+
+.btn-twtter {
+  color: #0ed841;
+}
+
+.btn-weibo {
+  color: #d8a20e;
+}
