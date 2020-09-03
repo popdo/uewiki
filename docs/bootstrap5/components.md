@@ -88,6 +88,72 @@
 
 <!-- tabs:end -->
 
+## 列表组
+
+列表组`list group`内的item元素支持任意`dom`元素,可以实现非常多复杂的效果。
+
+| 类名称                                       | 说明                     |
+|---------------------------------------------|-------------------------|
+| `.list-group`                               | 列表组                   |
+| `.list-group .list-group-flush`             | 列表组：无边框和圆角       |
+| `.list-group .list-group-horizontal`<br>`.list-group-horizontal-{sm\|md\|lg\|xl\|xxl}`        | 列表组：水平列表组         |
+| `.list-group-item`                          | 列表组内item             |
+| `.list-group-item .active`                  | 列表组内item：高亮显示     |
+| `.list-group-item .list-group-item-action`  | 列表组内item：带悬停效果   |
+| `.list-group-item .list-group-item-{color}` | 列表组内item：带颜色的item |
+
+```demo
+<div class="list-group">
+  <label class="list-group-item">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Cras justo odio
+  </label>
+  <label class="list-group-item active">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Dapibus ac facilisis in
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Morbi leo risus
+  </label>
+  <label class="list-group-item list-group-item-success">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Porta ac consectetur ac
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Vestibulum at eros
+  </label>
+</div>
+```
+
+```html
+<div class="list-group">
+  <label class="list-group-item">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Cras justo odio
+  </label>
+  <label class="list-group-item active">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Dapibus ac facilisis in
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Morbi leo risus
+  </label>
+  <label class="list-group-item list-group-item-success">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Porta ac consectetur ac
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input mr-1" type="checkbox" value="">
+    Vestibulum at eros
+  </label>
+</div>
+```
+
+更多示例部分查看[官方文档](https://v5.getbootstrap.com/docs/5.0/components/list-group/)
+
 ## 面包屑导航 :id=Breadcrumb
 
 - [官方文档入口](https://v5.getbootstrap.com/docs/5.0/components/breadcrumb/)

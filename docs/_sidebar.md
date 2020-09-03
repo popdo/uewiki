@@ -13,7 +13,7 @@
   - [表格](bootstrap5/tables.md)
   - [警告框](bootstrap5/alerts.md)
   - [导航/导航条/下拉](bootstrap5/navbar.md)
-  - [卡片](bootstrap5/card.md)
+  - [卡片](bootstrap5/cards.md)
   - [更多组件](bootstrap5/components.md)
   <!-- - [自定义](bootstrap5/diy.md) -->
   - [辅助](bootstrap5/helpers.md)
