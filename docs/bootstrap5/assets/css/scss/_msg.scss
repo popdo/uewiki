@@ -1,0 +1,71 @@
+// 背景降低透明度
+$msg_bg_tm:.15;
+// 文字颜色加深百分比
+$msg_text_darken:20%;
+// 文字降低饱和度百分比
+$msg_text_desaturate:20%;
+
+.msg{
+    display: flex;
+    align-items: center;
+    padding:1.5rem;
+    color:$dark;
+    background-color: #f8f9fa;
+    
+    .icon{
+        font-size:1.125rem;
+    }
+    strong,b{
+        margin-right: 8px;
+    }
+    &.is-primary{
+        color:darken(desaturate($primary,$msg_text_desaturate), $msg_text_darken);
+        background-color: rgba($primary,$msg_bg_tm);
+    }
+    &.is-secondary{
+        color:darken(desaturate($secondary,$msg_text_desaturate), $msg_text_darken);
+        background-color: rgba($secondary,$msg_bg_tm);
+    }
+    &.is-info{
+        color:darken(desaturate($info,$msg_text_desaturate), $msg_text_darken);
+        background-color: rgba($info,$msg_bg_tm);
+    }
+    &.is-success{
+        color:darken(desaturate($success,$msg_text_desaturate), $msg_text_darken);
+        background-color: rgba($success,$msg_bg_tm);
+    }
+    &.is-danger{
+        color:darken(desaturate($danger,$msg_text_desaturate), $msg_text_darken);
+        background-color: rgba($danger,$msg_bg_tm);
+    }
+    &.is-warning{
+        color:darken(desaturate($warning,$msg_text_desaturate), $msg_text_darken);
+        background-color: rgba($warning,$msg_bg_tm);
+    }
+
+}
+
+.alert{
+    // display: flex;
+    padding: 1.875rem;
+    text-align: center;
+    background-color: #fff!important;
+    border-radius: .125rem;
+    .icon{
+        display: block;
+        font-size: 3rem;
+        margin-bottom:1.5rem;
+    }
+
+    .alert-bd{
+        margin:1rem 0 1.5rem 0;
+        opacity: .9;
+    }
+    .alert-ft{
+        .btn{min-width: 60px;}
+    }
+}
+
+.msg,.alert{
+    .close{color:inherit;font-weight: 100;margin-left:auto;margin-top:-5px;font-size:1.625rem}
+}

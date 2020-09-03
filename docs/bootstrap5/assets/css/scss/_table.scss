@@ -1,0 +1,78 @@
+
+table{
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 20px;
+    th,td{
+        padding: $table_padding;
+        line-height: $table_line_height;
+        vertical-align: top;
+        border-top: 1px solid $element_border_color;
+    }
+    &>thead>tr{
+        th,td{
+            border-top:none;
+            border-bottom:2px solid $element_border_color;
+            vertical-align: bottom;
+        }
+    }
+}
+table.is-sm{
+    th,td{padding: $table_sm_padding;}
+}
+
+table>thead>tr>td, table>thead>tr>th{
+    border-top:none;
+    border-bottom:2px solid $element_border_color;
+    vertical-align: bottom;
+}
+table.is-bordered,table .is-bordered{
+    border:1px solid $element_border_color;
+    th,td{
+        border:1px solid $element_border_color;
+    }
+    &>thead>tr{
+        &>th,&>td{
+            border-bottom:2px solid $element_border_color;
+        }
+    }
+}
+
+table.is-striped,table .is-striped{
+    tr{
+        &:nth-of-type(odd) {background-color: $table_striped_bg;}
+    }
+}
+table.is-hovered,table .is-hovered{
+    tr{
+        &:hover {background-color: $table_hover_bg;}
+    }
+}
+table.is-data{
+    th,td{
+        vertical-align: middle;
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        position: relative;
+    }
+    .data-input{
+        height: 42px;
+        position: absolute;
+        left:0;
+        top:-1px;
+        background-color:transparent;
+        border:1px solid transparent;
+        color:inherit;
+        padding:0 16px;
+        width: 100%;
+        &:focus{
+            background-color: #fff;
+            border-color:$primary;
+        }
+    }
+}

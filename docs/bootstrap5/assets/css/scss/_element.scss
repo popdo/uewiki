@@ -1,0 +1,67 @@
+// 悬浮
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.is-full{
+  width: 100%!important;
+}
+
+// padding
+@import "element/flex";
+@import "element/display";
+@import "element/text";
+@import "element/bg";
+@import "element/border";
+@import "element/padding";
+@import "element/margin";
+@import "element/shadow";
+@import "element/align";
+@import "element/o";        // 圆角
+@import "element/size";
+@import "element/image";
+@import "element/font";
+@import "element/link";     // 链接
+@import "element/dot";      // 小圆点
+@import "element/other";    // 其他
+
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.btn,.input,select,textarea{
+  transition:all .15s ease-in-out;
+
+}
+
+// 出现半透明的遮罩
+.is-mask{
+  overflow: hidden;
+  position: relative;
+  &::after{
+    position: absolute;
+    z-index: -1;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    transition: background-color .5s ease 0s;
+    // background: -webkit-linear-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,transparent),to(rgba(0,0,0,.5)));
+    // background: linear-gradient(to bottom,transparent 0,transparent 40%,rgba(0,0,0,.5) 100%);
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+}
+

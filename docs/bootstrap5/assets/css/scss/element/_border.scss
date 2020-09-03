@@ -1,0 +1,29 @@
+.no-bo{border:none!important;}
+.bo-dotted{border-style:dotted!important}
+.bo-dashad{border-style:dashad!important}
+
+.bo{border:1px solid $border}
+.bo-top{border-top:1px solid $border}
+.bo-right{border-right:1px solid $border}
+.bo-bottom{border-bottom:1px solid $border}
+.bo-left{border-left:1px solid $border}
+
+.bo-2{border:2px solid $border}
+.bo-top-2{border-top:2px solid $border}
+.bo-right-2{border-right:2px solid $border}
+.bo-bottom-2{border-bottom:2px solid $border}
+.bo-left-2{border-left:2px solid $border}
+
+.bo-3{border:3px solid $border}
+.bo-top-3{border-top:3px solid $border}
+.bo-right-3{border-right:3px solid $border}
+.bo-bottom-3{border-bottom:3px solid $border}
+.bo-left-3{border-left:3px solid $border}
+
+.bo-primary{border-color:$primary!important}
+.bo-secondary{border-color:$secondary!important}
+.bo-success{border-color:$success!important}
+.bo-info{border-color:$info!important}
+.bo-link{border-color:$link!important}
+.bo-warning{border-color:$warning!important}
+.bo-danger{border-color:$danger!important}

@@ -1,0 +1,66 @@
+
+// 背景颜色
+.bg-white{background:#ffffff!important}
+.bg-black{background:#000000!important}
+.bg-light{background-color:$light!important}
+.bg-lighter{background-color:$lighter!important}
+
+.bg-primary{background-color:$primary!important}
+.bg-secondary{background-color:$secondary!important}
+.bg-success{background-color:$success!important}
+.bg-info{background-color:$info!important}
+.bg-link{background-color:$link!important}
+.bg-warning{background-color:$warning!important}
+.bg-danger{background-color:$danger!important}
+.bg-dark{background-color:$dark!important}
+.bg-gray{background-color:$gray!important}
+
+// 浅色背景
+
+.sbg-primary{background-color:rgba($primary,.1)!important}
+.sbg-secondary{background-color:rgba($secondary,.1)!important}
+.sbg-success{background-color:rgba($success,.1)!important}
+.sbg-info{background-color:rgba($info,.1)!important}
+.sbg-link{background-color:rgba($link,.1)!important}
+.sbg-warning{background-color:rgba($warning,.1)!important}
+.sbg-danger{background-color:rgba($danger,.1)!important}
+.sbg-dark{background-color:rgba($dark,.1)!important}
+.sbg-gray{background-color:rgba($gray,.1)!important}
+
+// 50%背景
+
+.mbg-primary{background-color:rgba($primary,.25)!important}
+.mbg-secondary{background-color:rgba($secondary,.25)!important}
+.mbg-success{background-color:rgba($success,.25)!important}
+.mbg-info{background-color:rgba($info,.25)!important}
+.mbg-link{background-color:rgba($link,.25)!important}
+.mbg-warning{background-color:rgba($warning,.25)!important}
+.mbg-danger{background-color:rgba($danger,.25)!important}
+.mbg-dark{background-color:rgba($dark,.25)!important}
+.mbg-gray{background-color:rgba($gray,.25)!important}
+
+.bg-hero {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+// 背景遮罩
+.bg-mask{
+    position: relative;
+    &::before {
+        background-color: rgba(0, 0, 0, 0.6);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+     > * {
+        position: relative;
+        z-index: 1;
+    }
+}

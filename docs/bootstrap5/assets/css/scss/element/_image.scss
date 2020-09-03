@@ -1,0 +1,40 @@
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+*-----------------------
+* 头像尺寸：每个尺寸+.5rem
+*-----------------------
+*/
+
+.avatar-xs{
+    width: 1.5rem; //24px
+    height: 1.5rem;
+}
+.avatar-sm{
+    width: 2rem; //32px
+    height: 2rem;
+}
+.avatar{
+    width: 2.5rem; //40px
+    height: 2.5rem;
+}
+.avatar-md{
+    width: 3rem; //48px
+    height: 3rem;
+}
+.avatar-lg{
+    width: 3.5rem; //56px
+    height: 3.5rem;
+}
+.avatar-xl{
+    width: 5rem; //80px
+    height: 5rem;
+}

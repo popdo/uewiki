@@ -1,0 +1,32 @@
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border:2px solid #fff;
+    background-color: $primary;
+}
+
+// 左上
+.dot-lt{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+// 右上
+.dot-rt{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+// 左下
+.dot-lb{
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+}
+// 右下
+.dot-rb{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+}

@@ -1,0 +1,39 @@
+
+/*文本格式化，超出范围，显示省略号*/
+// 原文：https://blog.csdn.net/liuxin00020/article/details/81355944 
+
+
+// 单行文本超出显示...
+@mixin text-overflow($display:block) {
+	display: $display;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+%text-overflow{
+	@include text-overflow();
+}
+// 不换行 ...
+%text-ooo{
+	white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+// 强制换行
+%text-cutrow{
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+// 弹性盒子
+%flex-align-center{
+	display: flex;
+	align-items: center;
+}
+
+// 淡入淡出
+%ease-in-out{
+	transition: all .2s ease-in-out;
+}

@@ -1,0 +1,184 @@
+.form-item,.btn{
+	appearance: none; //隐藏下拉菜单箭头与safari下的默认内阴影
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: inherit;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: $element_border_radius;
+	transition: all .15s ease-in-out;
+	display: inline-flex;
+    align-items: center;
+}
+
+
+// 通用小尺寸
+.form-item.is-sm,.btn.is-sm{
+    height: calc(1.75rem + 2px);
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    // border-radius: .2rem;
+}
+
+// 通用大尺寸
+.form-item.is-lg,.btn.is-lg{
+    height: calc(2.875rem + 2px);
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    // border-radius: .3rem;
+}
+
+.form-item {
+	//   box-shadow: inset 0 1px 2px rgba(10,10,10,.03);
+	border-color:$form_default_border_color;
+	max-width: 100%;
+	width: 100%;
+	color:$dark;
+	&::placeholder{
+		color:$muted_color;
+	}
+	// &:hover{
+	// 	border-color:$form_hover_border_color;
+	// }
+	&:not(:disabled):active,&:not(:disabled):focus{
+		color:$gray-700;
+		border-color: $form_active_focus__border_color;
+		@if $focus_has_box-shadow{
+			box-shadow: 0 0 0 0.125em rgba($form_active_focus__border_color,.15);
+		}
+	}
+	&:disabled,&[readonly]{
+		background-color: $border;
+		opacity: .8;
+	}
+}
+.form-text{margin-top:.25rem;display: block;color:$muted_color}
+
+textarea:not([rows]) {
+    max-height: 600px;
+	min-height: 120px;
+	width: 100%; //不设置造成代码挤压
+}
+
+textarea {
+    display: block;
+    max-width: 100%;
+    // min-width: 100%;
+    padding: .625em;
+    resize: vertical;
+}
+
+// .select:not(.is-multiple) {
+//     height: 2.25em;
+// }
+
+.select {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+	vertical-align: top;
+	select:not([multiple]) {
+		padding-right: 30px;
+	}
+	&:not(.is-multiple):not(.is-loading)::after {
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		z-index: 4;
+		content: " ";
+		display: block;
+		border: 2px solid transparent;
+		border-radius: 2px;
+		border-right: 0;
+		border-top: 0;
+		width: .5625em;
+		height: .5625em;
+		margin-top: -.375em;
+		transform: rotate(-45deg);
+		transform-origin: center;
+		border-color:$gray-700;
+	}	
+}
+
+.field:not(:last-child) {
+    margin-bottom: 1rem;
+}
+// .field-hd{
+// 	margin-bottom:0.5rem;
+// }
+.field-bd {
+	display: flex;
+	align-items: center;
+	.form-item:not(:last-child),label:not(:last-child) {
+		margin-right: .75rem;
+		margin-bottom:0;
+	}
+	.the-label{
+		flex-shrink: 0;
+		// padding-top:.375rem;
+		padding-top: calc(.375rem + 1px);
+		margin-bottom:0;
+	}
+	.has-tip{
+		width: 100%;
+		max-width: 100%;
+	}
+
+}
+
+// 内联排版
+.x-form{
+	.field{
+		display: flex;
+	}
+	// label{margin-bottom:0;} //针对x模式的hack
+	.x-label {
+		margin-right: 1.5rem;
+		text-align: right;
+		// padding-top:.375rem;
+		flex:1 0 0;
+		word-break: break-all;
+		word-wrap: break-word;
+		white-space: pre-wrap;
+
+		padding-top: calc(.375rem + 1px);
+		padding-bottom: calc(.375rem + 1px);
+		margin-bottom: 0;
+		font-size: inherit;
+		line-height: 1.5;
+	}
+	.field-bd {
+		flex:5 1 0;
+	}
+	
+}
+
+// inline风格表单
+.in-label{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: .75em;
+    padding-right: .75em;
+	border:1px solid $border;
+	background-color: #fbfbfb;
+	margin-bottom: 0;
+	border-radius:$element_border_radius;
+	flex-shrink: 0;
+	align-self: stretch;
+}
+.in-form{
+	.field{
+		display: flex;
+		.is-group:not(:last-child){
+			margin-right:.75rem;
+		}
+	}
+	.in-label{
+		width: 110px;
+	}
+}
+.form-help{display: block;margin-top:.3125rem}

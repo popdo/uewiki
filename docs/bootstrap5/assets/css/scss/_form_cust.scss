@@ -1,0 +1,243 @@
+// 通用属性
+.is-radio, .is-checkbox,.is-switch,.is-file{
+    // pointer-events: none; 
+    // user-select: none;
+    // display: inline-block;
+    // position: absolute;
+    // opacity: 0!important;
+    // z-index: -1;
+    display: none;
+}
+// label
+.is-radio+label, .is-checkbox+label, .is-switch+label, .is-file+label   {
+    position: relative;
+    cursor: pointer;
+    margin-bottom:0;
+
+}
+.is-radio+label, .is-checkbox+label{
+    height: 1rem;
+    line-height: 1rem;
+    padding:0 .75rem 0 1.625rem;
+    // 如果label内容为空
+    &:empty{
+        padding-left:.5rem;
+    }
+}
+
+// 解决表格中无法垂直居中的问题
+table .is-checkbox+label{
+    float: left;
+    margin-top:3px;
+}
+// before
+.is-radio+label::before,.is-radio:checked+label::after,.is-checkbox+label::before,.is-checkbox:checked+label::after {
+    position: absolute;
+    transition: all .2s ease-in-out;
+    top:0;
+    left: 0;
+    content: "";
+}
+
+// radio
+.is-radio+label::before,.is-radio:checked+label::after{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;    
+}
+.is-radio+label{
+    &::before{
+        background-color: $radio_default_bg;
+    }
+    &::after{
+        transform: scale(.4);
+    }
+}
+.is-radio:checked+label{
+    &::before{
+        background-color: $primary;   
+    }
+    &::after{
+        background-color: #fff;
+    }
+}
+
+
+// checkbox
+.is-checkbox+label{
+    &::before{
+        border: 1px solid $checkbox_default_border;
+        background-color: #fff;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 3px;
+    }
+}
+.is-checkbox:checked+label{
+    &::before {
+        background-color: $primary;
+        border-color: $primary;
+    }
+    &::after {
+        width: .313rem;
+        height: .563rem;
+        top: .188rem;
+        left: .375rem;
+        transform: rotate(45deg);
+        border-width: .12rem;
+        border-style: solid;
+        border-color: #fff;
+        border-top: 0;
+        border-left: 0;
+        border-radius: 0;
+    }
+}
+
+
+.is-radio[disabled]+label, .is-checkbox[disabled]+label, .is-switch[disabled]+label, .is-file[disabled]+label {
+    opacity: .5;
+    cursor: not-allowed;
+    
+}
+
+// switch 组件
+.is-switch+label{
+    // margin-left:-28px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    display: flex;
+    padding-top:0;
+    @extend %text-ooo;
+    .ico{
+        width:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        border:1px solid transparent;
+        background-color: $switch_default_bg;
+        color:#fff;
+        position:relative;
+        height: 1.5rem;
+        // min-width: 3rem;
+        border-radius: 1rem;
+        padding:0 .5rem 0 1.5rem;
+        margin-right:.5rem;
+        transition:background-color 0.2s ease-in-out;
+        &:empty{
+            width: 46px;
+        }
+        &::before{
+            position: absolute;
+            top:-1px;
+            left:0;
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            transform: scale(0.7);
+            content:"";
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: 5;
+            transition: margin-left 0.2s ease-in-out;
+        }
+        &::after{
+            content:attr(data-tip);
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        i{
+            width: 100%;
+            min-width: 23px;//兼容on/off状态
+            text-align: center;
+            font-style: normal;
+            display: none;
+        }
+    }
+    
+}
+
+.is-switch:checked+label{
+    .ico{
+        background-color: $primary;
+        border-color:transparent;
+        padding:0 1.5rem 0 .5rem;
+        &::before{
+            // transform: translateX()
+            margin-left:calc(100% - 1.5rem);
+        }
+        &::after{
+            display: none;
+        }
+        i{
+            display: inline-block;
+        }
+        
+    }
+} 
+
+// file 文件上传
+.is-file{
+    &[disabled]+label{
+        pointer-events: none;
+    } 
+}
+
+.is-pic-file+label .box-hd{
+    border:none;
+    // overflow: hidden;
+    background-repeat: no-repeat;
+    background-size:100%;
+    // &::after{
+    //     position: absolute;
+    //     z-index: -1;
+    //     top:0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     display: block;
+    //     content: '';
+    //     transition: background-color .5s ease 0s;
+    //     // background: -webkit-linear-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,transparent),to(rgba(0,0,0,.5)));
+    //     // background: linear-gradient(to bottom,transparent 0,transparent 40%,rgba(0,0,0,.5) 100%);
+    //     background-color: rgba(0, 0, 0, 0.45);
+    // }
+}
+
+// 不同状态的颜色配置
+.is-radio.is-success:checked + label::before,.is-checkbox.is-success:checked + label::before  {
+    background-color: $success;
+    border-color: $success;
+}
+.is-radio.is-link:checked + label::before,.is-checkbox.is-link:checked + label::before  {
+    background-color: $link;
+    border-color: $link;
+}
+.is-radio.is-info:checked + label::before,.is-checkbox.is-info:checked + label::before  {
+    background-color: $info;
+    border-color: $info;
+}
+.is-radio.is-warning:checked + label::before,.is-checkbox.is-warning:checked + label::before  {
+    background-color: $warning;
+    border-color: $warning;
+}
+.is-radio.is-danger:checked + label::before,.is-checkbox.is-danger:checked + label::before  {
+    background-color: $danger;
+    border-color: $danger;
+}
+.is-radio.is-dark:checked + label::before,.is-checkbox.is-dark:checked + label::before  {
+    background-color: $dark;
+    border-color: $dark;
+}
+
+
+.is-switch.is-success:checked+label .ico{background-color: $success;}
+.is-switch.is-danger:checked+label .ico{background-color: $danger;}
+.is-switch.is-link:checked+label .ico{background-color: $link;}
+.is-switch.is-info:checked+label .ico{background-color: $info;}
+.is-switch.is-warning:checked+label .ico{background-color: $warning;}
+.is-switch.is-dark:checked+label .ico{background-color: $dark;}
+.is-switch.is-light:checked+label .ico{background-color: $light;}
