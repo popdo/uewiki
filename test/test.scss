@@ -91,14 +91,14 @@ $tools:(
         // 判断values是否是map
         @if type-of($values)=="map"{
 
-            @each $key,$item in $values {
-                @if $key==null {
+            @each $k,$item in $values {
+                @if $k==null {
                     .#{map-get($tool,'class')}{
-                        #{map-get($tool,'attr')}: #{$item};
+                        #{map-get($tool,'attr')}: $item;
                     }
                 }@else{
-                    .#{map-get($tool,'class')}-#{$key}{
-                        #{map-get($tool,'attr')}: #{$item};
+                    .#{map-get($tool,'class')}-#{$k}{
+                        #{map-get($tool,'attr')}: $item;
                     }
                 }
             }
@@ -109,7 +109,7 @@ $tools:(
 
             @each $item in $values {
                 .#{map-get($tool,'class')}-#{$item}{
-                    #{map-get($tool,'attr')}: #{$item};
+                    #{map-get($tool,'attr')}: $item;
                 }
             }
 
