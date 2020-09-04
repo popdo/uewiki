@@ -1,67 +1,31 @@
-// map地图 
-/*
-语法：
-$map: (
-    key1: value1,
-    key2: (
-        key-1: value-1,
-        key-2: value-2,
-    ),
-    key3: value3
-);
-*/
-
-// -----------------------------------------------------------
-
-// map地图
-$theme-colors: (
-  "primary":    #0d6efd,
-  "secondary":  #6f42c1,
-  "success":    #28a745,
-  "info":       #17a2b8,
-  "warning":    #ffc107,
-  "danger":     #dc3545,
-  "light":      #f8f9fa,
-  "dark":       #343a40
-) !default;
-
-
-@each $key,$var in $theme-colors {
-    .bg-#{$key}{
-        background:$var;
-    }
-}
-
-// 遍历map地图：$theme-colors 
-@each $key,$var in $theme-colors {
-    // 判断排除掉key是"light"的项
-    @if $key != "light" {
-        // 批量生成css
-        .sbg-#{$key}{
-            background:lighten($var,35%);
-        }
-    }
-}
-
-// -----------------------------------------------------------
 $tools:(
-    "border":(
-        class: bo,
-        attr: border,
+	"border":(
+		class: bo,
+		attrs: border,
+		values: (
+			null: 1px solid #ddd,
+			0: 0
+		),
+	),
+    "margin-x":(
+        class: mx,
+        attrs: margin-left margin-right,
         values: (
-            null: 1px solid #ddd,
-            0: 0,
+            1: .25rem,
+            2: .5rem,
+            3: 1rem,
+            4: 1.5rem,
+            5: 3rem
         ),
-
     ),
     "overflow": (
         class: ov,
-        attr: overflow,
-        values: auto hidden,
+        attrs: overflow,
+        values: auto hidden
     ),
     "height": (
         class: h,
-        attr: height,
+        attrs: height,
         values: (
             25: 25%,
             50: 50%,
@@ -70,10 +34,23 @@ $tools:(
             auto: auto
         )
     ),
+    "头像图片尺寸": (
+        class: is,
+        attrs: width height,
+        values: (
+            16x16: 16,
+            24x24: 24,
+            32x32: 32,
+            48x48: 48,
+            64x64: 64,
+            96x96: 96,
+            128x128: 128
+        )
+    ),
 
     "width": (
         class: w,
-        attr: width,
+        attrs: width,
         values: 75%
     ),
     "demo":demoddd
@@ -81,48 +58,64 @@ $tools:(
 
 // 遍历整个tools map
 @each $key,$tool in $tools {
+    /* #{ $key}  */
 
     // 判断$tool是否是map类型数据
     @if type-of($tool)=="map" {
+        
+        $class:     map-get($tool,'class');
+        $attrs:       map-get($tool,'attrs');
+        $values:   map-get($tool,'values');
+        
 
-        // 判断values的类型
-        $values:map-get($tool,'values');
-
-        // 判断values是否是map
+        // 判断values是否是map类型数据
         @if type-of($values)=="map"{
 
             @each $k,$item in $values {
                 @if $k==null {
-                    .#{map-get($tool,'class')}{
-                        #{map-get($tool,'attr')}: $item;
+                    .#{$class}{
+                        #{$attrs}: $item;
                     }
                 }@else{
-                    .#{map-get($tool,'class')}-#{$k}{
-                        #{map-get($tool,'attr')}: $item;
+                    // 判断attrs是否是数组
+                    @if type-of($attrs)=="list" {
+
+                        .#{$class}-#{$k}{
+                            @each $attr in $attrs {
+                                #{$attr}: $item;
+                            }
+                        }
+
+                    }@else{
+
+                        .#{$class}-#{$k}{
+                            #{$attrs}: $item;
+                        }
+
                     }
+
                 }
             }
 
         }
-        // 判断values是否数组
+        // 判断values是否数组类型数据
         @else if type-of($values)=="list"{
 
             @each $item in $values {
-                .#{map-get($tool,'class')}-#{$item}{
-                    #{map-get($tool,'attr')}: $item;
+                .#{$class}-#{$item}{
+                    #{$attrs}: $item;
                 }
             }
 
         }
-        // 判断values是否字符串
+        // 判断values是否字符串类型数据
         @else if type-of($values)=="string"{
 
         }
-        // 判断values是否数字
+        // 判断values是否数字类型数据
         @else if type-of($values)=="number"{
-
-            .#{map-get($tool,'class')}{
-                #{map-get($tool,'attr')}: #{map-get($tool,'values')};
+            .#{$class}{
+                #{$attrs}: $values;
             }
 
         }

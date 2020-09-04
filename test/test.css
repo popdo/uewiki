@@ -1,75 +1,5 @@
 @charset "UTF-8";
-/*
-语法：
-$map: (
-    key1: value1,
-    key2: (
-        key-1: value-1,
-        key-2: value-2,
-    ),
-    key3: value3
-);
-*/
-.bg-primary {
-  background: #0d6efd;
-}
-
-.bg-secondary {
-  background: #6f42c1;
-}
-
-.bg-success {
-  background: #28a745;
-}
-
-.bg-info {
-  background: #17a2b8;
-}
-
-.bg-warning {
-  background: #ffc107;
-}
-
-.bg-danger {
-  background: #dc3545;
-}
-
-.bg-light {
-  background: #f8f9fa;
-}
-
-.bg-dark {
-  background: #343a40;
-}
-
-.sbg-primary {
-  background: #bed8fe;
-}
-
-.sbg-secondary {
-  background: #d5c8ed;
-}
-
-.sbg-success {
-  background: #9be7ac;
-}
-
-.sbg-info {
-  background: #90e4f1;
-}
-
-.sbg-warning {
-  background: #ffeeba;
-}
-
-.sbg-danger {
-  background: #f6cdd1;
-}
-
-.sbg-dark {
-  background: #88939e;
-}
-
+/* border  */
 .bo {
   border: 1px solid #ddd;
 }
@@ -78,6 +8,33 @@ $map: (
   border: 0;
 }
 
+/* margin-x  */
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-5 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+/* overflow  */
 .ov-auto {
   overflow: auto;
 }
@@ -86,6 +43,7 @@ $map: (
   overflow: hidden;
 }
 
+/* height  */
 .h-25 {
   height: 25%;
 }
@@ -106,6 +64,45 @@ $map: (
   height: auto;
 }
 
+/* 头像图片尺寸  */
+.is-16x16 {
+  width: 16;
+  height: 16;
+}
+
+.is-24x24 {
+  width: 24;
+  height: 24;
+}
+
+.is-32x32 {
+  width: 32;
+  height: 32;
+}
+
+.is-48x48 {
+  width: 48;
+  height: 48;
+}
+
+.is-64x64 {
+  width: 64;
+  height: 64;
+}
+
+.is-96x96 {
+  width: 96;
+  height: 96;
+}
+
+.is-128x128 {
+  width: 128;
+  height: 128;
+}
+
+/* width  */
 .w {
   width: 75%;
 }
+
+/* demo  */
