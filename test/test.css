@@ -10,22 +10,102 @@ $map: (
     key3: value3
 );
 */
-.btn-facebook {
-  color: #440ed8;
+.bg-primary {
+  background: #0d6efd;
 }
 
-.btn-github {
-  color: #0e5fd8;
+.bg-secondary {
+  background: #6f42c1;
 }
 
-.btn-google {
-  color: #d80e6c;
+.bg-success {
+  background: #28a745;
 }
 
-.btn-twtter {
-  color: #0ed841;
+.bg-info {
+  background: #17a2b8;
 }
 
-.btn-weibo {
-  color: #d8a20e;
+.bg-warning {
+  background: #ffc107;
+}
+
+.bg-danger {
+  background: #dc3545;
+}
+
+.bg-light {
+  background: #f8f9fa;
+}
+
+.bg-dark {
+  background: #343a40;
+}
+
+.sbg-primary {
+  background: #bed8fe;
+}
+
+.sbg-secondary {
+  background: #d5c8ed;
+}
+
+.sbg-success {
+  background: #9be7ac;
+}
+
+.sbg-info {
+  background: #90e4f1;
+}
+
+.sbg-warning {
+  background: #ffeeba;
+}
+
+.sbg-danger {
+  background: #f6cdd1;
+}
+
+.sbg-dark {
+  background: #88939e;
+}
+
+.bo {
+  border: 1px solid #ddd;
+}
+
+.bo-0 {
+  border: 0;
+}
+
+.ov-auto {
+  overflow: auto;
+}
+
+.ov-hidden {
+  overflow: hidden;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.w {
+  width: 75%;
 }

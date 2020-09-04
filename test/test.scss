@@ -11,19 +11,121 @@ $map: (
 );
 */
 
-// 创建一个map
-$web-bgs: (
-    "facebook":rgb(68, 14, 216),
-    "github":rgb(14, 95, 216),
-    "google":rgb(216, 14, 108),
-    "twtter":rgb(14, 216, 65),
-    "weibo":rgb(216, 162, 14),
+// -----------------------------------------------------------
+
+// map地图
+$theme-colors: (
+  "primary":    #0d6efd,
+  "secondary":  #6f42c1,
+  "success":    #28a745,
+  "info":       #17a2b8,
+  "warning":    #ffc107,
+  "danger":     #dc3545,
+  "light":      #f8f9fa,
+  "dark":       #343a40
+) !default;
+
+
+@each $key,$var in $theme-colors {
+    .bg-#{$key}{
+        background:$var;
+    }
+}
+
+// 遍历map地图：$theme-colors 
+@each $key,$var in $theme-colors {
+    // 判断排除掉key是"light"的项
+    @if $key != "light" {
+        // 批量生成css
+        .sbg-#{$key}{
+            background:lighten($var,35%);
+        }
+    }
+}
+
+// -----------------------------------------------------------
+$tools:(
+    "border":(
+        class: bo,
+        attr: border,
+        values: (
+            null: 1px solid #ddd,
+            0: 0,
+        ),
+
+    ),
+    "overflow": (
+        class: ov,
+        attr: overflow,
+        values: auto hidden,
+    ),
+    "height": (
+        class: h,
+        attr: height,
+        values: (
+            25: 25%,
+            50: 50%,
+            75: 75%,
+            100: 100%,
+            auto: auto
+        )
+    ),
+
+    "width": (
+        class: w,
+        attr: width,
+        values: 75%
+    ),
+    "demo":demoddd
 );
 
-// $web:facebook,github,google,twtter,weibo;
-// 使用each遍历map
-@each $key,$value in $web-bgs {
-    .btn-#{$key} {
-        color: $value;
+// 遍历整个tools map
+@each $key,$tool in $tools {
+
+    // 判断$tool是否是map类型数据
+    @if type-of($tool)=="map" {
+
+        // 判断values的类型
+        $values:map-get($tool,'values');
+
+        // 判断values是否是map
+        @if type-of($values)=="map"{
+
+            @each $key,$item in $values {
+                @if $key==null {
+                    .#{map-get($tool,'class')}{
+                        #{map-get($tool,'attr')}: #{$item};
+                    }
+                }@else{
+                    .#{map-get($tool,'class')}-#{$key}{
+                        #{map-get($tool,'attr')}: #{$item};
+                    }
+                }
+            }
+
+        }
+        // 判断values是否数组
+        @else if type-of($values)=="list"{
+
+            @each $item in $values {
+                .#{map-get($tool,'class')}-#{$item}{
+                    #{map-get($tool,'attr')}: #{$item};
+                }
+            }
+
+        }
+        // 判断values是否字符串
+        @else if type-of($values)=="string"{
+
+        }
+        // 判断values是否数字
+        @else if type-of($values)=="number"{
+
+            .#{map-get($tool,'class')}{
+                #{map-get($tool,'attr')}: #{map-get($tool,'values')};
+            }
+
+        }
     }
+
 }
