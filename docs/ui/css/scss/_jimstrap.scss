@@ -1,0 +1,51 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */ 
+  
+
+// // 调用我自定义的样式表
+// @import "jimedit";
+ 
+@import "../bootstrap-scss/functions";
+@import "../bootstrap-scss/variables";
+@import "../bootstrap-scss/mixins";
+// @import "../bootstrap-scss/root";              //压缩版：1kb css reset
+// @import "../bootstrap-scss/reboot";            //压缩版：4kb css reset
+// @import "../bootstrap-scss/type";              //压缩版：1kb css reset
+@import "../bootstrap-scss/images";            //压缩版：不足1kb
+@import "../bootstrap-scss/code";              //压缩版：1kb
+@import "../bootstrap-scss/grid";              //压缩版：15kb
+
+
+// @import "../bootstrap-scss/tables";            //压缩版：5kb
+// @import "f../orms";                            //压缩版：5kb 删除了原版中高达10kb的html5表单验证部分代码
+// @import "../bootstrap-scss/buttons";           //压缩版：15-16kb
+// @import "../bootstrap-scss/transitions";       //压缩版：1kb 过度效果插件，BootStrap4新特性
+
+// @import "../bootstrap-scss/dropdown";          //压缩版：4kb
+// @import "../bootstrap-scss/button-group";      //压缩版：2kb
+// @import "../bootstrap-scss/input-group";       //压缩版：5kb
+// @import "../bootstrap-scss/custom-forms";      //压缩版：11kb
+// @import "../bootstrap-scss/nav";               //压缩版：2kb
+// @import "../bootstrap-scss/navbar";            //压缩版：9kb
+// @import "../bootstrap-scss/card";              //压缩版：5kb
+// @import "../bootstrap-scss/breadcrumb";        //压缩版：1kb 面包屑 HomeL\ibrary\Data
+@import "../bootstrap-scss/pagination";        //压缩版：1kb 分页
+// @import "../bootstrap-scss/badge";             //压缩版：2kb 徽章
+// @import "../bootstrap-scss/jumbotron";         //压缩版：1kb     
+// @import "../bootstrap-scss/alert";             //压缩版：2kb 警报
+// @import "../bootstrap-scss/progress";          //压缩版：2kb 进度条
+// @import "../bootstrap-scss/media";             //压缩版：1kb 多媒体，一般用于编排文字与图片的混合展示
+// @import "../bootstrap-scss/list-group";        //压缩版：7kb
+@import "../bootstrap-scss/close";             //压缩版：1kb
+// @import "../bootstrap-scss/toasts";            //压缩版：1kb 消息通知插件 https://getbootstrap.com/docs/4.3/components/toasts/ 
+// @import "../bootstrap-scss/modal";             //压缩版：4kb 模态框（弹窗）
+// @import "../bootstrap-scss/tooltip";           //压缩版：2kb 提示冒泡
+// @import "../bootstrap-scss/popover";           //压缩版：4kb 弹出框
+// @import "../bootstrap-scss/carousel";          //压缩版：4kb 轮播图
+@import "../bootstrap-scss/spinners";          //压缩版：1kb loading动画图标
+// @import "../bootstrap-scss/utilities";         //压缩版：52kb 内置大量样式表
+// @import "../bootstrap-scss/print";             //压缩版：1kb

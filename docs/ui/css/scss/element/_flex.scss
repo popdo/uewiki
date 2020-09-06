@@ -1,0 +1,28 @@
+.flex-xy-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-x-c{
+    display: flex;
+    justify-content: center;
+}
+.flex-y-c{
+    display: flex;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column!important;
+}
+.flex-auto{flex:auto;}
+.flex-0-0-auto{flex:0 0 auto;}
+.flex-0{flex:0;}
+.flex-1-0-auto{flex:1 0 auto;}
+.flex-0-1-auto{flex: 0 1 auto;}
+
+.self-auto     { align-self: auto !important; }
+.self-start    { align-self: flex-start !important; }
+.self-end      { align-self: flex-end !important; }
+.self-center   { align-self: center !important; }
+.self-baseline { align-self: baseline !important; }
+.self-stretch  { align-self: stretch !important; }

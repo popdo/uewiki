@@ -1,0 +1,23 @@
+.oo{border-radius: 50rem!important}
+.o{border-radius: 50%!important}
+.o-xs{border-radius:$default-radius!important}
+.o-sm{border-radius: .375rem!important}
+.o-md{border-radius: .5rem!important}
+.o-lg{border-radius: 1rem!important}
+
+.o-top{
+    border-top-left-radius: $default-radius!important;
+    border-top-right-radius: $default-radius!important;
+}
+.o-left{
+    border-top-left-radius: $default-radius!important;
+    border-bottom-left-radius: $default-radius!important;
+}
+.o-right{
+    border-top-right-radius: $default-radius!important;
+    border-bottom-right-radius: $default-radius!important;
+}
+.o-bottom{
+    border-bottom-left-radius: $default-radius!important;
+    border-bottom-right-radius: $default-radius!important;
+}

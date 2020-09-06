@@ -1,0 +1,43 @@
+/*------------------------------------
+	Links
+------------------------------------*/
+a{
+    color:$link;
+    &:hover{
+        color:darken($link, 15%);
+        text-decoration: none;
+    }
+}
+
+
+.link {
+    color: $link;
+    transition: all .2s ease-in-out;
+}
+.link:hover {
+color: darken($link, 10%);
+text-decoration: none;
+}
+
+.link-dark {
+    color: $dark !important;
+    transition: all .2s ease-in-out;
+}
+  
+.link-dark:hover, .link-dark.active, .link-dark.selected {
+    color: $link !important;
+}
+  
+.link-white {
+    color: #fff !important;
+    transition: all .2s ease-in-out;
+}
+.link-white:hover, .link-white.active, .link-white.selected {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+  
+.link-muted {
+    color: $muted_color !important;
+    transition: all .2s ease-in-out;
+}
+.link-muted:hover {color: $link !important;}

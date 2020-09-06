@@ -1,6 +1,6 @@
 # Headline
 
-> An awesome project.是这个意思吗
+> An awesome project.是这个意思吗  
 
 > *NOTE:* dddddd
 
@@ -15,28 +15,7 @@
 |                                                                                                        |                        |
 |                                                                                                        |                        |
 
-
-```demo
-<div class="ov-hidden bo-l bo">
-ddd
-</div>
-```
-
-```html
-<p>This is a paragraph</p>
-<a href="//docsify.js.org/">Docsify</a>
-```
-
-```bash
-echo "hello"
-```
-
-```php
-function getAdder(int $x): int 
-{
-    return 123;
-}
-```
+## 自定义bootstrap5
 
 !> **Important** notice with `inline code` and additional placeholder text used
 to force the content to wrap and span multiple lines.

@@ -1,13 +1,5 @@
 // 通用属性
-.is-radio, .is-checkbox,.is-switch,.is-file{
-    // pointer-events: none; 
-    // user-select: none;
-    // display: inline-block;
-    // position: absolute;
-    // opacity: 0!important;
-    // z-index: -1;
-    display: none;
-}
+
 // label
 .is-radio+label, .is-checkbox+label, .is-switch+label, .is-file+label   {
     position: relative;
@@ -180,11 +172,6 @@ table .is-checkbox+label{
 } 
 
 // file 文件上传
-.is-file{
-    &[disabled]+label{
-        pointer-events: none;
-    } 
-}
 
 .is-pic-file+label .box-hd{
     border:none;

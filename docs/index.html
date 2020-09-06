@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<!-- <link rel="stylesheet" href="vue.css"> -->
 	<link rel="stylesheet" href="bootstrap5/assets/css/all.min.css">
+	<!-- <link rel="stylesheet" href="ui/css/all.css"> -->
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_1256328_ipd4gezj0p.css">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue">
 	<link rel="icon" href="idea.svg" sizes="32x32">
 	<style>
@@ -18,10 +20,20 @@
 		.docsify-tabs--classic .docsify-tabs__tab--active{box-shadow: none;}
 		.docsify-copy-code-button{font-family: Arial;}
 		.demo-box{margin-bottom:-1.2em}
+		.demo-box a{font-weight: inherit;}
 		.docsify-tabs .demo-box{margin-bottom:-1em}
 		.markdown-section .btn-primary{color:#fff}
 		a:hover{color: var(--theme-color,#42b983);}
 		.sidebar-nav .collapse{display: block;}
+
+		/* 兼容 ui */
+		.markdown-section pre .tag{
+			background-color:transparent;
+			display: inline;
+			font-size: inherit;
+			font-weight: inherit;
+			padding:0;
+		}
 		/* 美化3级菜单 */
 		.app-sub-sidebar .app-sub-sidebar li::before{content: "·"}
 		.app-sub-sidebar .app-sub-sidebar li a{color:#888}
@@ -32,9 +44,9 @@
 
 		summary:focus{outline: none;}
 
-			li.collapse .app-sub-sidebar {
-      display: none;
-    }
+		li.collapse .app-sub-sidebar {
+      		display: none;
+		}
 
 	</style>
 </head>
@@ -63,7 +75,7 @@ window.$docsify = {
 	// themeColor: '#3F51B5',    // 配置主题颜色
 	// repo: 'https://github.com/popdo/uewiki.git', // 右上角图标
 	// homepage: 'home.md', // 手动指定首页，默认 README.md,也可以直接填写互联网的.md的url地址
-	coverpage: true,    // 开启封面
+	// coverpage: true,    // 开启封面
 	// onlyCover: true,   // 只在首页时加载封面
 	loadNavbar: true,   // 开启导航条
 	loadSidebar: true,  // 开启侧边导航
@@ -109,7 +121,7 @@ window.$docsify = {
 				// 让markdown支持自定义的代码块code解析
 				if (lang === "demo") {
 					return (
-						'<div class="demo-box border p-3">' + code + "</div>"
+						'<div class="demo-box border bo p-3">' + code + "</div>"
 					);
 				}
 				return this.origin.code.apply(this, arguments);

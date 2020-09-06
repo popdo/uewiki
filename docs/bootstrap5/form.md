@@ -732,6 +732,37 @@ switch控件虽然是使用checkbox实现的，但是他是经过css自定义的
 <!-- tabs:start -->
 
 ```demo
+<p><code>.is-file</code> 自定义file样式结合is-group完成</p>
+<div class="mb-2">
+  <input type="file" class="is-file" id="customFileLg">
+  <label class="is-group group-lg d-flex" for="customFileLg">
+    <span class="file-text form-control">Choose file...</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<div class="mb-2">
+  <input type="file" class="is-file" id="customFileMd">
+  <label class="is-group d-flex" for="customFileMd">
+    <span class="file-text form-control">Choose fileeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<div class="mb-2">
+  <input type="file" class="is-file" id="customFileSm">
+  <label class="is-group group-sm d-flex" for="customFileSm">
+    <span class="file-text form-control">Choose file...</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<div class="">
+  <input type="file" class="is-file" id="customFileDisabled" disabled>
+  <label class="is-group d-flex" for="customFileDisabled">
+    <span class="file-text form-control">Choose file...</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+
+<p><code>.form-file</code> </p>
 <div class="form-file form-file-lg mb-2">
   <input type="file" class="form-file-input" id="customFileLg">
   <label class="form-file-label" for="customFileLg">
@@ -763,6 +794,36 @@ switch控件虽然是使用checkbox实现的，但是他是经过css自定义的
 ```
 
 ```html
+
+<div class="mb-2">
+  <input type="file" class="is-file" id="customFileLg">
+  <label class="is-group group-lg d-flex" for="customFileLg">
+    <span class="file-text form-control">Choose file...</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<div class="mb-2">
+  <input type="file" class="is-file" id="customFileMd">
+  <label class="is-group d-flex" for="customFileMd">
+    <span class="file-text form-control">Choose fileeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<div class="mb-2">
+  <input type="file" class="is-file" id="customFileSm">
+  <label class="is-group group-sm d-flex" for="customFileSm">
+    <span class="file-text form-control">Choose file...</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<div class="">
+  <input type="file" class="is-file" id="customFileDisabled" disabled>
+  <label class="is-group d-flex" for="customFileDisabled">
+    <span class="file-text form-control">Choose file...</span>
+    <span class="item-text">Browse</span>
+  </label>
+</div>
+<!-- ------------------------------------------------------------- -->
 <!-- 大尺寸 -->
 <div class="form-file form-file-lg mb-2">
   <input type="file" class="form-file-input" id="customFileLg">
@@ -848,6 +909,31 @@ switch控件虽然是使用checkbox实现的，但是他是经过css自定义的
 ### **基础样式**
 
 ```demo
+<p><code>.is-group</code>:input-group-text 改为 item-text</p>
+<div class="is-group group-lg mb-3 d-flex">
+  <span class="item-text" id="basic-addon30">https://example.com/users/</span>
+  <input type="text" class="form-control form-control-lg" id="basic-url" aria-describedby="basic-addon30" placeholder="大尺寸" >
+</div>
+
+<div class="is-group group-sm mb-3 d-flex">
+  <span class="item-text">$</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="小尺寸" >
+  <span class="item-text">.00</span>
+</div>
+
+<div class="is-group mb-3 d-flex">
+  <span class="item-text">With textarea</span>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
+<div class="is-group d-flex">
+  <span class="item-text">First name</span>
+  <input type="text" aria-label="First name" class="form-control">
+  <span class="item-text">last name</span>
+  <input type="text" aria-label="Last name" class="form-control">
+</div>
+
+<hr>
+<p><code>.input-group</code></p>
 <div class="input-group input-group-lg mb-3">
   <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="大尺寸" >
@@ -898,6 +984,38 @@ switch控件虽然是使用checkbox实现的，但是他是经过css自定义的
 ### **结合按钮、下拉菜单**
 
 ```demo
+<p><code>.is-group</code></p>
+<div class="is-group mb-3 d-flex">
+  <button type="button" class="btn btn-outline-secondary">Action</button>
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+</div>
+
+<div class="is-group d-flex">
+  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+  <button type="button" class="btn btn-outline-secondary">Action</button>
+  <ul class="dropdown-menu dropdown-menu-right">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+</div>
+
+<p><code>.input-group</code></p>
 <div class="input-group mb-3">
   <button type="button" class="btn btn-outline-secondary">Action</button>
   <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
@@ -964,6 +1082,38 @@ switch控件虽然是使用checkbox实现的，但是他是经过css自定义的
 ### **结合select**
 
 ```demo
+<p><code>.is-group</code></p>
+<div class="is-group mb-3 d-flex">
+  <label class="item-text" for="inputGroupSelect01">Options</label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="is-group mb-3 d-flex">
+  <select class="form-select" id="inputGroupSelect02">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <label class="item-text" for="inputGroupSelect02">Options</label>
+</div>
+
+<div class="is-group d-flex">
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <button class="btn btn-outline-secondary" type="button">Button</button>
+</div>
+
+<p><code>.input-group</code></p>
 <div class="input-group mb-3">
   <label class="input-group-text" for="inputGroupSelect01">Options</label>
   <select class="form-select" id="inputGroupSelect01">
@@ -1030,6 +1180,36 @@ switch控件虽然是使用checkbox实现的，但是他是经过css自定义的
 ### **结合文件上传**
 
 ```demo
+<p><code>.is-group</code> 修改量大，不依赖bootstrap的文件上传css</p>
+<div class="mb-3 d-flex">
+    <input type="file" class="is-file" id="inputGroupFileAddon001" aria-describedby="inputGroupFileAddon001">
+    <label class="is-group" for="inputGroupFileAddon001">
+      <span class="item-text">Upload</span>
+      <span class="form-control file-text">Choose file...</span>
+      <span class="item-text">Browse</span>
+    </label>
+</div>
+
+<div class="mb-3 d-flex">
+    <input type="file" class="is-file" id="inputGroupFileAddon002" aria-describedby="inputGroupFileAddon002">
+    <label class="is-group" for="inputGroupFileAddon002">
+      <span class="form-control file-text">Choose file...</span>
+      <span class="item-text">Browse</span>
+      <span class="item-text">Upload</span>
+    </label>
+</div>
+
+<div class="is-group mb-3 d-flex">
+    <input type="file" class="is-file" id="inputGroupFileAddon003" aria-describedby="inputGroupFileAddon003">
+    <label class="is-group" for="inputGroupFileAddon003">
+      <span class="form-control file-text">Choose file...</span>
+      <span class="item-text o-0">Browse</span>
+    </label>
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon003">Button</button>
+</div>
+
+
+<p><code>.input-group</code></p>
 <div class="input-group mb-3">
   <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
   <div class="form-file">

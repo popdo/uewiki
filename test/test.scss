@@ -64,8 +64,8 @@ $tools:(
     @if type-of($tool)=="map" {
         
         $class:     map-get($tool,'class');
-        $attrs:       map-get($tool,'attrs');
-        $values:   map-get($tool,'values');
+        $attrs:     map-get($tool,'attrs');
+        $values:    map-get($tool,'values');
         
 
         // 判断values是否是map类型数据
