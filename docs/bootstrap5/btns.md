@@ -336,20 +336,20 @@
 
 ```demo
 <p><code>.is-group</code></p>
-<div class="is-group btn-group-lg mb-1" role="group" aria-label="Large button group">
-    <button type="button" class="btn btn-outline-dark btn-lg">Left</button>
-    <button type="button" class="btn btn-outline-dark btn-lg">Middle</button>
-    <button type="button" class="btn btn-outline-dark btn-lg">Right</button>
+<div class="is-group group-lg mb-1" role="group" aria-label="Large button group">
+    <button type="button" class="btn btn-outline-dark">Left</button>
+    <button type="button" class="btn btn-outline-dark">Middle</button>
+    <button type="button" class="btn btn-outline-dark">Right</button>
 </div>
 <div class="is-group mb-1" role="group" aria-label="Default button group">
     <button type="button" class="btn btn-outline-dark">Left</button>
     <button type="button" class="btn btn-outline-dark">Middle</button>
     <button type="button" class="btn btn-outline-dark">Right</button>
 </div>
-<div class="is-group btn-group-sm mb-1" role="group" aria-label="Small button group">
-    <button type="button" class="btn btn-outline-dark btn-sm">Left</button>
-    <button type="button" class="btn btn-outline-dark btn-sm">Middle</button>
-    <button type="button" class="btn btn-outline-dark btn-sm">Right</button>
+<div class="is-group group-sm mb-1" role="group" aria-label="Small button group">
+    <button type="button" class="btn btn-outline-dark">Left</button>
+    <button type="button" class="btn btn-outline-dark">Middle</button>
+    <button type="button" class="btn btn-outline-dark">Right</button>
 </div>
 
 <hr>

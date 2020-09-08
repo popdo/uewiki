@@ -37,8 +37,8 @@
 @import "bootstrap5-scss/badge";
 // @import "bootstrap5-scss/alert";
 // @import "bootstrap5-scss/progress";     // 进度条
-// @import "bootstrap5-scss/list-group";    // 8kb
-// @import "bootstrap5-scss/close";
+@import "bootstrap5-scss/list-group";    // 8kb
+@import "bootstrap5-scss/close";
 // @import "bootstrap5-scss/toasts";       // 消息通知插件
 // @import "bootstrap5-scss/modal";        // 模态框（弹窗）
 // @import "bootstrap5-scss/tooltip";      // 提示冒泡
@@ -47,7 +47,7 @@
 // @import "bootstrap5-scss/spinners";     // loading动画图标
 
 // Helpers
-// @import "bootstrap5-scss/helpers";
+@import "bootstrap5-scss/helpers";          // 3kb
 
 // Utilities
 @import "bootstrap5-scss/utilities/api";    // 内置大量样式表,预计50-60kb
