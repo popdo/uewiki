@@ -252,6 +252,10 @@ window.$docsify = {
 }
 ```
 
+## 侧边栏折叠插件
+
+详情访问[github项目](https://github.com/iPeng6/docsify-sidebar-collapse)
+
 ## 更多插件
 
 参考 [awesome-docsify](https://github.com/docsifyjs/awesome-docsify)

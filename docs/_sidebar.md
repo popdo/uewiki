@@ -3,20 +3,9 @@
 - [首页](/)
 - [快速开始](README.md)
 
-<!-- - ui
-
-- [按钮](ui/btns.md)
-- [表格](ui/table.md)
-- [徽章](ui/tag.md)
-- [卡片](ui/card.md)
-- [表单](ui/form.md)
-- [表单-bt5](ui/forms.md)
-- [消息框](ui/msg.md)
-- [导航条](ui/nav.md) -->
-
 - bootstrap5
 
-- [配置](bootstrap5/setting.md)
+  - [配置](bootstrap5/setting.md)
   - [布局](bootstrap5/layout.md)
   - [内容](bootstrap5/content.md)
   - [表单](bootstrap5/form.md)
