@@ -256,6 +256,109 @@ window.$docsify = {
 
 详情访问[github项目](https://github.com/iPeng6/docsify-sidebar-collapse)
 
+## 右侧目录树
+
+```css
+/* 右侧目录树 */
+@media (min-width: 992px) {
+    .content{right:220px}
+
+    .sidebar-nav li > .app-sub-sidebar {
+        width: 220px;
+        position: fixed;
+        top: 130px;
+        bottom:0;
+        left:calc((100% - 300px) * 80%);
+        right:0;
+        background: #fff;
+        overflow-y: auto;
+        /* overflow: visible; */
+    }
+    .sidebar-nav li > .app-sub-sidebar::before{
+        display: block;
+        content: '本文目录';
+        font-weight: bold;
+    }
+    .sidebar-nav li > .app-sub-sidebar li{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .section-link{flex-grow: 1}
+    .sidebar-nav li > .app-sub-sidebar > li::before{
+        content:'';
+        display: block;
+        width: 11px;
+        height: 11px;
+        border:2px solid #fff;
+        border-radius: 50%;
+        background-color:#ddd;
+        position: absolute;
+        left:0;
+        z-index: 1;
+    }
+    .app-sub-sidebar > li::after{
+        position: absolute;
+        top:0;
+        left: 5px;
+        content:'';
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color:#ededed;
+    }
+    .sidebar-nav li > .app-sub-sidebar > .active::before{
+        background-color:var(--theme-color,#42b983);
+    }
+    /* parent-active */
+    .sidebar ul li.parent-active>a {
+        border-right: 2px solid;
+        color: var(--theme-color,#42b983);
+        font-weight: 600;
+    }
+    /* scrollbar */
+    .sidebar-nav li > .app-sub-sidebar::-webkit-scrollbar {
+        width:4px
+    }
+    .sidebar-nav li > .app-sub-sidebar::-webkit-scrollbar-thumb {
+        background:transparent;
+        border-radius:4px
+    }
+    .sidebar-nav li > .app-sub-sidebar:hover::-webkit-scrollbar-thumb {
+        background:hsla(0,0%,53.3%,.4)
+    }
+    .sidebar-nav li > .app-sub-sidebar:hover::-webkit-scrollbar-track {
+        background:hsla(0,0%,53.3%,.1)
+    }
+
+    /* hack */
+    .sidebar-nav .app-sub-sidebar li.active a{border:0;}
+    .app-sub-sidebar{margin: 0!important;}
+    .app-sub-sidebar li{margin: 0!important;padding:5px 25px}
+
+}
+```
+
+如果文档的目录树特别长，可以考虑给`.app-sub-sidebar`添加`overflow-y:auto`否则在小尺寸的屏幕下可能无法完整的显示所有的目录树。
+
+为了让左侧的上一级菜单同时高亮，我们还需要通过plugins配置一下：让每次路由切换时数据全部加载完成后调用class
+
+```js
+plugins: [
+    function(hook, vm) {
+        // 每次路由切换时数据全部加载完成后调用，没有参数。
+        hook.doneEach(function() {
+            // 给侧边栏.active添加父级class
+            var subNav = document.getElementsByClassName("app-sub-sidebar")[0];
+            subNav.parentNode.classList.add("parent-active");
+            // subNav.parentNode.className = "parent-active";
+
+        }
+    );
+}
+```
+
 ## 更多插件
 
 参考 [awesome-docsify](https://github.com/docsifyjs/awesome-docsify)

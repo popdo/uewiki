@@ -24,5 +24,17 @@
     <div class="sbg-danger" style="width:100%;height:50px;margin-bottom:10px"></div>
     <div class="sbg-light" style="width:100%;height:50px;margin-bottom:10px"></div>
     <div class="sbg-dark" style="width:100%;height:50px;margin-bottom:10px"></div>
+    <div id="navi" class="nav">
+        <ul>
+            <li class="cc"><a href="1.html">主页</a></li>
+            <li><a href="2.html">栏目1</a></li>
+        </ul>
+        </div>
+    <script type="text/javascript" language="javascript">
+        // var nav = document.getElementById("navi");
+        var nav = document.getElementsByClassName("cc")[0];
+        var bnav = nav.parentNode.parentNode;
+        bnav.className = "ok";
+        </script>
 </body>
 </html>
