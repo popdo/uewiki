@@ -36,11 +36,15 @@ a:hover {
 }
 
 .docsify-tabs .demo-box {
-  margin-bottom: -1em;
+  margin-bottom: -1.1em;
 }
 
 .docsify-copy-code-button {
   font-family: Arial;
+}
+
+:root {
+  --border-color:#ededed;
 }
 
 .app-sub-sidebar .app-sub-sidebar li::before {
@@ -53,6 +57,10 @@ a:hover {
 
 .app-nav ul ul {
   min-width: 138px;
+}
+
+.markdown-section h3 {
+  font-size: 1.375rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -71,7 +79,7 @@ li.collapse .app-sub-sidebar {
 
 .demo-box {
   margin-bottom: -1.2em;
-  border: 1px solid #ededed;
+  border: 1px solid var(--border-color);
   padding: 1rem;
 }
 
@@ -115,7 +123,7 @@ li.collapse .app-sub-sidebar {
     height: 11px;
     border: 2px solid #fff;
     border-radius: 50%;
-    background-color: #ddd;
+    background-color: #ccc;
     position: absolute;
     left: 0;
     z-index: 1;
@@ -128,7 +136,7 @@ li.collapse .app-sub-sidebar {
     display: block;
     width: 1px;
     height: 100%;
-    background-color: #ededed;
+    background-color: var(--border-color);
   }
   .sidebar-nav li > .app-sub-sidebar > .active::before {
     background-color: var(--theme-color, #42b983);
