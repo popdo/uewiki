@@ -1,5 +1,7 @@
 # markdown语法
 
+## 基础语法
+
 !> 基础语法 详见表格：
 
 |语法|含义|效果|
@@ -23,13 +25,3 @@
 |`***粗斜体***`<br>`___粗斜体___`|粗斜体字|***我是粗斜体***|
 |`~~删除线~~`|删除体字|~~我是删除体~~|
 |&#124;标题1&#124;标题2&#124;标题3&#124;<br>&#124;:--&#124;:--:&#124;--:&#124;<br>&#124;左对齐&#124;居中&#124;右对齐&#124;|表格<br>[表格生成器](https://www.tablesgenerator.com/markdown_tables)|<table><thead><tr><th align="left">th1</th><th align="center">th2</th><th align="right">th3</th></tr></thead><tbody><tr><td align="left">左对齐</td><td align="center">居中</td><td align="right">右对齐</td></tr></tbody></table>|
-
-
-
-
-
-
-
-
-
-

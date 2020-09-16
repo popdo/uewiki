@@ -23,6 +23,7 @@ a:hover{color: var(--theme-color,#42b983);}
 :root{
     --border-color:#ededed;
 }
+
 // 美化3级菜单
 .app-sub-sidebar .app-sub-sidebar li::before{content: "·"}
 .app-sub-sidebar .app-sub-sidebar li a{color:#888}
@@ -36,6 +37,7 @@ a:hover{color: var(--theme-color,#42b983);}
     //     padding-bottom: 10px;
     // }
     h3{font-size: 1.375rem;}
+    table{display:table}
 }
 // 优化手机端宽度
 @media screen and (max-width: 768px){

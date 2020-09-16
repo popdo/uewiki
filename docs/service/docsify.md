@@ -43,7 +43,6 @@ window.$docsify = {
 <div class="demo-box border p-3">您的内容...</div>
 ```
 
-
 ## flexible-alerts插件
 
 - [插件地址](https://github.com/fzankl/docsify-plugin-flexible-alerts)
@@ -174,7 +173,7 @@ window.$docsify = {
     tabs: {
         // persist    : false,
         // sync       : false,
-        // theme      : 'material',	// 下划线风格
+        // theme      : 'material', // 下划线风格
         // tabComments: false,
         // tabHeadings: false
     },
@@ -375,7 +374,7 @@ plugins: [
 该标题不会出现在侧边栏的目录中。
 ```
 
-要忽略特定页面上的所有标题，你可以在页面的第一个标题上使用 `<!-- {docsify-ignore-all} --> `。
+要忽略特定页面上的所有标题，你可以在页面的第一个标题上使用 `<!-- {docsify-ignore-all} -->`。
 
 ```markdown
 # Getting Started <!-- {docsify-ignore-all} -->
@@ -384,4 +383,3 @@ plugins: [
 
 该页面所有标题不会出现在侧边栏的目录中。
 ```
-

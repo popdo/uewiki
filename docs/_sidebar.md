@@ -22,6 +22,7 @@
   - [git命令](service/git.md)
   - [docsify配置](service/docsify.md)
   - [markdown语法](service/markdown.md)
+  - [mermaid脑图](service/mermaid.md)
 
 - UE
 
