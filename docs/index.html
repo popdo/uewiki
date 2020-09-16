@@ -6,132 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="description" content="Description">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<!-- <link rel="stylesheet" href="vue.css"> -->
 	<link rel="stylesheet" href="bootstrap5/assets/css/all.min.css">
-	<!-- <link rel="stylesheet" href="ui/css/all.css"> -->
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_1256328_ipd4gezj0p.css">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue">
+	<link rel="stylesheet" href="assets/style.min.css">
 	<link rel="icon" href="idea.svg" sizes="32x32">
-	<style>
-		/* 兼容bootstrap5 */
-		button,button:focus{outline: none;}
-		hr{opacity: 1;}
-		.blockquote{font-size:inherit}
-		.docsify-tabs--classic .docsify-tabs__tab--active{box-shadow: none;}
-		.docsify-copy-code-button{font-family: Arial;}
-		.demo-box{margin-bottom:-1.2em}
-		.demo-box a{font-weight: inherit;}
-		.docsify-tabs .demo-box{margin-bottom:-1em}
-		.markdown-section .btn-primary{color:#fff}
-		a:hover{color: var(--theme-color,#42b983);}
-		.sidebar-nav .collapse{display: block;}
-
-		/* 兼容 ui */
-		.markdown-section pre .tag{
-			background-color:transparent;
-			display: inline;
-			font-size: inherit;
-			font-weight: inherit;
-			padding:0;
-		}
-		/* 美化3级菜单 */
-		.app-sub-sidebar .app-sub-sidebar li::before{content: "·"}
-		.app-sub-sidebar .app-sub-sidebar li a{color:#888}
-		/* 优化手机端宽度 */
-		@media screen and (max-width: 768px){
-			.markdown-section{max-width:90%}
-		}
-
-		summary:focus{outline: none;}
-
-		li.collapse .app-sub-sidebar {
-      		display: none;
-		}
-
-
-	/* 右侧目录树 */
-	@media (min-width: 992px) {
-		.content{right:220px}
-		
-		.sidebar-nav li > .app-sub-sidebar {
-			width: 220px;
-			position: fixed;
-			top: 130px;
-			bottom:0;
-			left:calc((100% - 300px) * 80%);
-			right:0;
-			background: #fff;
-			overflow-y: auto;
-			/* overflow: visible; */
-			
-		}
-		.sidebar-nav li > .app-sub-sidebar::before{
-			display: block;
-			content: '本文目录';
-			font-weight: bold;
-		}
-		.sidebar-nav li > .app-sub-sidebar li{
-			display: flex;
-			align-items: center;
-			width: 100%;
-			position: relative;
-		}
-		.section-link{flex-grow: 1}
-		.sidebar-nav li > .app-sub-sidebar > li::before{
-			content:'';
-			display: block;
-			width: 11px;
-			height: 11px;
-			border:2px solid #fff;
-			border-radius: 50%;
-			background-color:#ddd;
-			position: absolute;
-			left:0;
-			z-index: 1;
-		}
-		.app-sub-sidebar > li::after{
-			position: absolute;
-			top:0;
-			left: 5px;
-			content:'';
-			display: block;
-			width: 1px;
-			height: 100%;
-			background-color:#ededed;
-		}
-		.sidebar-nav li > .app-sub-sidebar > .active::before{
-			background-color:var(--theme-color,#42b983);
-		}
-
-		/* parent-active */
-		.sidebar ul li.parent-active>a {
-			border-right: 2px solid;
-			color: var(--theme-color,#42b983);
-			font-weight: 600;
-		}
-		/* scrollbar */
-		.sidebar-nav li > .app-sub-sidebar::-webkit-scrollbar {
-			width:4px
-		}
-		.sidebar-nav li > .app-sub-sidebar::-webkit-scrollbar-thumb {
-			background:transparent;
-			border-radius:4px
-		}
-		.sidebar-nav li > .app-sub-sidebar:hover::-webkit-scrollbar-thumb {
-			background:hsla(0,0%,53.3%,.4)
-		}
-		.sidebar-nav li > .app-sub-sidebar:hover::-webkit-scrollbar-track {
-			background:hsla(0,0%,53.3%,.1)
-		}
-
-		/* hack */
-		.sidebar-nav .app-sub-sidebar li.active a{border:0;}
-		.app-sub-sidebar{margin: 0!important;}
-		.app-sub-sidebar li{margin: 0!important;padding:5px 25px}
-
-	}
-		  
-	</style>
 </head>
 <body>
 <div id="app"></div>
@@ -141,7 +20,7 @@
 <!-- <script src="//cdn.jsdelivr.net/npm/mermaid@8.7.0/dist/mermaid.min.js"></script> -->
 <script>
 
-// 支持mermaid脑图 官方网址：https://mermaid-js.github.io/mermaid/ 
+// 支持mermaid脑图 项目网址：https://mermaid-js.github.io/mermaid/ 
 var num = 0;
 const conf = {
 	logLevel:4,
@@ -204,7 +83,7 @@ window.$docsify = {
 				// 让markdown支持自定义的代码块code解析
 				if (lang === "demo") {
 					return (
-						'<div class="demo-box border bo p-3">' + code + "</div>"
+						'<div class="demo-box">' + code + "</div>"
 					);
 				}
 				return this.origin.code.apply(this, arguments);
@@ -299,10 +178,6 @@ window.$docsify = {
 
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-
-<!-- 左侧菜单自动折叠插件 -->
-<!-- <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
-<!-- <script src="assets/docsify-sidebar-collapse.min.js"></script> -->
 
 <!-- emoji 解析插件 -->
 <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script> -->
